@@ -22,11 +22,6 @@ namespace ArknightsRandomizerWinForm
             
         }
 
-        private void ClassFiltersScreen_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void Check_Every_Checkbox_On_This_Form()
         {
             for (int i = 0; i < ClassFiltersBox.Items.Count; i++)
@@ -208,6 +203,10 @@ namespace ArknightsRandomizerWinForm
             }
         }
 
-        
+
+        private void ClassFiltersScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

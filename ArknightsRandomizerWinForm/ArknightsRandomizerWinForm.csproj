@@ -58,6 +58,7 @@
     <Compile Include="ClassFiltersScreen.Designer.cs">
       <DependentUpon>ClassFiltersScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="StageLists.cs" />
     <Compile Include="UserRosterScreen.cs">
       <SubType>Form</SubType>
     </Compile>
