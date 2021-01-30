@@ -10,59 +10,14 @@ namespace ArknightsRandomizerWinForm
 {
     static class Program
     {
-        static StageLists stageLists = new StageLists();
+        public static StageLists stageLists = new StageLists();
+        public static OperatorRarityLists operatorRarityLists = new OperatorRarityLists();
+        public static OperatorClassLists operatorClassesLists = new OperatorClassLists();
 
         public static List<string> userOps = new List<string>() { };
-        
         public static List<string> rolledOps = new List<string>() { };
         public static List<string> potentialOpsToRoll = new List<string> { };
         public static List<string> rolledStages = new List<string>() { };
-
-        public static List<string> classesToFilterOut = new List<string>() { };
-        public static List<string> raritiesToFilterOut = new List<string>() { };
-        public static List<string> chaptersToFilterOut = new List<string>() { };
-        
-        public static List<string> medicOperators = new List<string>() { "Folinic", "Ceylon", "Breeze", "Sussurro", "Nightingale", "Shining", "Warfarin", "Silence", "Ptilopsis", "Perfumer", "Gavial", "Myrrh", "Ansel", "Hibiscus", "Lancet-2" };
-        public static List<string> userMedicOperators = new List<string>() { };
-        public static List<string> defaultUserMedicOperators = new List<string>() {  };
-
-        public static List<string> supporterOperators = new List<string>() { "Suzuran", "Podenco", "Tsukinogi", "Shamare", "Magallan", "Glaucus", "Angelina", "Sora", "Istina", "Pramanix", "Mayer", "Earthspirit", "Deepcolor", "Orchid" };
-        public static List<string> userSupporterOperators = new List<string>() { };
-        public static List<string> defaultUserSupporterOperators = new List<string>() { };
-
-        public static List<string> sniperOperators = new List<string>() { "Andreana", "Rosa(Poca)", "W", "Sesa", "GreyThroat", "Ambriel", "May", "Executor", "Vermeil", "Schwarz", "Catapult", "Exusiai", "Firewatch", "Provence", "Meteorite", "Platinum", "Blue Poison", "Shirayuki", "Meteor", "Jessica", "Adnachiel", "Kroos", "Rangers" };
-        public static List<string> userSniperOperators = new List<string>() { };
-        public static List<string> defaultUserSniperOperators = new List<string>() { };
-
-        public static List<string> vanguardOperators = new List<string>() { "Chiave", "Elysium", "Bagpipe", "Reed", "Myrtle", "Grani", "Siege", "Texas", "Zima", "Vigna", "Scavenger", "Courier", "Plume", "Vanilla", "Fang", "Yato" };
-        public static List<string> userVanguardOperators = new List<string>() { };
-        public static List<string> defaultUserVanguardOperators = new List<string>() { };
-
-        public static List<string> specialistOperators = new List<string>() { "Jaye", "Weedy", "THRM-EX", "Phantom", "Aak", "Snowsant", "Waai Fu", "Ethan", "FEater", "Manticore", "Cliffheart", "Projekt Red", "Shaw", "Rope", "Gravel" };
-        public static List<string> userSpecialistOperators = new List<string>() { };
-        public static List<string> defaultUserSpecialistOperators = new List<string>() { };
-
-        public static List<string> defenderOperators = new List<string>() { "Asbestos", "Nian", "Hung", "Bison", "Dur-nar", "Spot", "Saria", "Hoshiguma", "Vulcan", "Croissant", "Liskarm", "Nearl", "Gummy", "Cuora", "Matterhorn", "Beagle", "Cardigan", "Noir Corne" };
-        public static List<string> userDefenderOperators = new List<string>() { };
-        public static List<string> defaultUserDefenderOperators = new List<string>() { };
-
-        public static List<string> guardOperators = new List<string>() { "Thorns", "Ayerscape", "Sideroca", "Cutter", "Bibeak", "Utage", "Blaze", "Broca", "Flamebringer", "Hellagur", "Astesia", "Ch'en", "Swire", "Popukar", "Skadi", "Beehunter", "Midnight", "Savage", "SilverAsh", "Specter", "Lappland", "Indra", "Franka", "Mousse", "Estelle", "Frostleaf", "Matoimaru", "Dobermann", "Melantha", "Castle-3" };
-        public static List<string> userGuardOperators = new List<string>() { };
-        public static List<string> defaultUserGuardOperators = new List<string>() { };
-
-        public static List<string> casterOperators = new List<string>() { "Beeswax", "Click", "Leonhardt", "Absinthe", "Ceobe", "Leizi", "Mostima", "Greyy", "Nightmare", "Eyjafjalla", "Ifrit", "Skyfire", "Amiya", "Gitano", "Haze", "Steward", "Lava", "12F", "Durin" };
-        public static List<string> userCasterOperators = new List<string>() { };
-        public static List<string> defaultUserCasterOperators = new List<string>() { };
-
-        public static List<string> oneStarOperators = new List<string>() { "THRM-EX", "Castle-3", "Lancet-2" };
-        public static List<string> twoStarOperators = new List<string>() { "12F", "Durin", "Rangers", "Noir Corne", "Yato" };
-        public static List<string> threeStarOperators = new List<string>() { "Spot", "Popukar", "Midnight", "Catapult", "Orchid", "Steward", "Ansel", "Hibiscus", "Lava", "Adnachiel", "Kroos", "Beagle", "Cardigan", "Melantha", "Plume", "Vanilla", "Fang" };
-        public static List<string> fourStarOperators = new List<string>() { "Estelle", "Jaye", "Click", "Podenco", "Cutter", "Utage", "Ambriel", "May", "Ethan", "Dur-nar", "Vermeil", "Myrtle", "Sussurro", "Greyy", "Beehunter", "Shaw", "Earthspirit", "Deepcolor", "Gummy", "Cuora", "Matterhorn", "Perfumer", "Gavial", "Myrrh", "Rope", "Gravel", "Mousse", "Frostleaf", "Matoimaru", "Dobermann", "Vigna", "Scavenger", "Courier", "Shirayuki", "Meteor", "Jessica", "Gitano", "Haze" };
-        public static List<string> fiveStarOperators = new List<string>() { "Andreana", "Chiave", "Beeswax", "Ayerscape", "Folinic", "Leonhardt", "Absinthe", "Tsukinogi", "Asbestos", "Elysium", "Shamare", "Sideroca", "Sesa", "Bibeak", "Leizi", "Hung", "Snowsant", "GreyThroat", "Broca", "Reed", "Bison", "Waai Fu", "Ceylon", "Flamebringer", "Breeze", "Executor", "Astesia", "Glaucus", "Swire", "Grani", "Nightmare", "Savage", "FEater", "Manticore", "Sora", "Istina", "Pramanix", "Cliffheart", "Firewatch", "Provence", "Vulcan", "Croissant", "Liskarm", "Projekt Red", "Nearl", "Warfarin", "Silence", "Mayer", "Skyfire", "Amiya", "Meteorite", "Platinum", "Blue Poison", "Specter", "Lappland", "Indra", "Franka", "Texas", "Zima", "Ptilopsis" };
-        public static List<string> sixStarOperators = new List<string>() { "Thorns", "Suzuran", "Rosa(Poca)", "Weedy", "W", "Phantom", "Bagpipe", "Ceobe", "Nian", "Aak", "Blaze", "Mostima", "Magallan", "Hellagur", "Schwarz", "Ch'en", "Skadi", "SilverAsh", "Saria", "Hoshiguma", "Nightingale", "Shining", "Angelina", "Eyjafjalla", "Ifrit", "Siege", "Exusiai" };
-
-
-
 
         public static Random randomNumberGenerator = new Random();
 
@@ -189,26 +144,26 @@ namespace ArknightsRandomizerWinForm
 
             Read_UserOps_From_File(userOps);
 
-            Reset_A_List_To_Its_Default_Values(userMedicOperators, defaultUserMedicOperators);
-            Reset_A_List_To_Its_Default_Values(userSupporterOperators, defaultUserSupporterOperators);
-            Reset_A_List_To_Its_Default_Values(userSniperOperators, defaultUserSniperOperators);
-            Reset_A_List_To_Its_Default_Values(userVanguardOperators, defaultUserVanguardOperators);
-            Reset_A_List_To_Its_Default_Values(userSpecialistOperators, defaultUserSpecialistOperators);
-            Reset_A_List_To_Its_Default_Values(userDefenderOperators, defaultUserDefenderOperators);
-            Reset_A_List_To_Its_Default_Values(userGuardOperators, defaultUserGuardOperators);
-            Reset_A_List_To_Its_Default_Values(userCasterOperators, defaultUserCasterOperators);
+            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userMedicOperators, operatorClassesLists.defaultUserMedicOperators);
+            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSupporterOperators, operatorClassesLists.defaultUserSupporterOperators);
+            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSniperOperators, operatorClassesLists.defaultUserSniperOperators);
+            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userVanguardOperators, operatorClassesLists.defaultUserVanguardOperators);
+            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSpecialistOperators, operatorClassesLists.defaultUserSpecialistOperators);
+            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userDefenderOperators, operatorClassesLists.defaultUserDefenderOperators);
+            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userGuardOperators, operatorClassesLists.defaultUserGuardOperators);
+            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userCasterOperators, operatorClassesLists.defaultUserCasterOperators);
 
             Filter_Out_Unselected_Classes_From_Pool_Of_UserOps();
             Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps();
 
-            Add_Ops_To_Potential_List(medicLimit, userMedicOperators);
-            Add_Ops_To_Potential_List(supporterLimit, userSupporterOperators);
-            Add_Ops_To_Potential_List(sniperLimit, userSniperOperators);
-            Add_Ops_To_Potential_List(vanguardLimit, userVanguardOperators);
-            Add_Ops_To_Potential_List(specialistLimit, userSpecialistOperators);
-            Add_Ops_To_Potential_List(defenderLimit, userDefenderOperators);
-            Add_Ops_To_Potential_List(guardLimit, userGuardOperators);
-            Add_Ops_To_Potential_List(casterLimit, userCasterOperators);
+            Add_Ops_To_Potential_List(medicLimit, operatorClassesLists.userMedicOperators);
+            Add_Ops_To_Potential_List(supporterLimit, operatorClassesLists.userSupporterOperators);
+            Add_Ops_To_Potential_List(sniperLimit, operatorClassesLists.userSniperOperators);
+            Add_Ops_To_Potential_List(vanguardLimit, operatorClassesLists.userVanguardOperators);
+            Add_Ops_To_Potential_List(specialistLimit, operatorClassesLists.userSpecialistOperators);
+            Add_Ops_To_Potential_List(defenderLimit, operatorClassesLists.userDefenderOperators);
+            Add_Ops_To_Potential_List(guardLimit, operatorClassesLists.userGuardOperators);
+            Add_Ops_To_Potential_List(casterLimit, operatorClassesLists.userCasterOperators);
 
             Add_PotentialOps_List_To_List_Of_RolledOps_And_Increment_SquadSize();
 
@@ -232,16 +187,16 @@ namespace ArknightsRandomizerWinForm
         }
         public static void Filter_Out_Unselected_Classes_From_Pool_Of_UserOps()
         {
-            for (int i = 0; i < classesToFilterOut.Count; i++)
+            for (int i = 0; i < operatorClassesLists.classesToFilterOut.Count; i++)
             {
-                switch (classesToFilterOut[i])
+                switch (operatorClassesLists.classesToFilterOut[i])
                 {
                     case "Medics":
                         {
-                            for (int x = 0; x < medicOperators.Count; x++)
+                            for (int x = 0; x < operatorClassesLists.medicOperators.Count; x++)
                             {
-                                userOps.Remove(medicOperators[x]);
-                                userMedicOperators.Remove(medicOperators[x]);
+                                userOps.Remove(operatorClassesLists.medicOperators[x]);
+                                operatorClassesLists.userMedicOperators.Remove(operatorClassesLists.medicOperators[x]);
                             }
 
                             break;
@@ -249,10 +204,10 @@ namespace ArknightsRandomizerWinForm
 
                     case "Supporters":
                         {
-                            for (int x = 0; x < supporterOperators.Count; x++)
+                            for (int x = 0; x < operatorClassesLists.supporterOperators.Count; x++)
                             {
-                                userOps.Remove(supporterOperators[x]);
-                                userSupporterOperators.Remove(supporterOperators[x]);
+                                userOps.Remove(operatorClassesLists.supporterOperators[x]);
+                                operatorClassesLists.userSupporterOperators.Remove(operatorClassesLists.supporterOperators[x]);
                             }
 
                             break;
@@ -260,10 +215,10 @@ namespace ArknightsRandomizerWinForm
 
                     case "Snipers":
                         {
-                            for (int x = 0; x < sniperOperators.Count; x++)
+                            for (int x = 0; x < operatorClassesLists.sniperOperators.Count; x++)
                             {
-                                userOps.Remove(sniperOperators[x]);
-                                userSniperOperators.Remove(sniperOperators[x]);
+                                userOps.Remove(operatorClassesLists.sniperOperators[x]);
+                                operatorClassesLists.userSniperOperators.Remove(operatorClassesLists.sniperOperators[x]);
                             }
 
                             break;
@@ -271,10 +226,10 @@ namespace ArknightsRandomizerWinForm
 
                     case "Vanguards":
                         {
-                            for (int x = 0; x < vanguardOperators.Count; x++)
+                            for (int x = 0; x < operatorClassesLists.vanguardOperators.Count; x++)
                             {
-                                userOps.Remove(vanguardOperators[x]);
-                                userVanguardOperators.Remove(vanguardOperators[x]);
+                                userOps.Remove(operatorClassesLists.vanguardOperators[x]);
+                                operatorClassesLists.userVanguardOperators.Remove(operatorClassesLists.vanguardOperators[x]);
                             }
 
                             break;
@@ -282,10 +237,10 @@ namespace ArknightsRandomizerWinForm
 
                     case "Specialists":
                         {
-                            for (int x = 0; x < specialistOperators.Count; x++)
+                            for (int x = 0; x < operatorClassesLists.specialistOperators.Count; x++)
                             {
-                                userOps.Remove(specialistOperators[x]);
-                                userSpecialistOperators.Remove(specialistOperators[x]);
+                                userOps.Remove(operatorClassesLists.specialistOperators[x]);
+                                operatorClassesLists.userSpecialistOperators.Remove(operatorClassesLists.specialistOperators[x]);
                             }
 
                             break;
@@ -293,10 +248,10 @@ namespace ArknightsRandomizerWinForm
 
                     case "Defenders":
                         {
-                            for (int x = 0; x < defenderOperators.Count; x++)
+                            for (int x = 0; x < operatorClassesLists.defenderOperators.Count; x++)
                             {
-                                userOps.Remove(defenderOperators[x]);
-                                userDefenderOperators.Remove(defenderOperators[x]);
+                                userOps.Remove(operatorClassesLists.defenderOperators[x]);
+                                operatorClassesLists.userDefenderOperators.Remove(operatorClassesLists.defenderOperators[x]);
                             }
 
                             break;
@@ -304,10 +259,10 @@ namespace ArknightsRandomizerWinForm
 
                     case "Guards":
                         {
-                            for (int x = 0; x < guardOperators.Count; x++)
+                            for (int x = 0; x < operatorClassesLists.guardOperators.Count; x++)
                             {
-                                userOps.Remove(guardOperators[x]);
-                                userGuardOperators.Remove(guardOperators[x]);
+                                userOps.Remove(operatorClassesLists.guardOperators[x]);
+                                operatorClassesLists.userGuardOperators.Remove(operatorClassesLists.guardOperators[x]);
                             }
 
                             break;
@@ -315,10 +270,10 @@ namespace ArknightsRandomizerWinForm
 
                     case "Casters":
                         {
-                            for (int x = 0; x < casterOperators.Count; x++)
+                            for (int x = 0; x < operatorClassesLists.casterOperators.Count; x++)
                             {
-                                userOps.Remove(casterOperators[x]);
-                                userCasterOperators.Remove(casterOperators[x]);
+                                userOps.Remove(operatorClassesLists.casterOperators[x]);
+                                operatorClassesLists.userCasterOperators.Remove(operatorClassesLists.casterOperators[x]);
                             }
 
                             break;
@@ -329,24 +284,25 @@ namespace ArknightsRandomizerWinForm
             }
         }
         public static void Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps()
+
         {
-            for (int i = 0; i < raritiesToFilterOut.Count; i++)
+            for (int i = 0; i < operatorRarityLists.raritiesToFilterOut.Count; i++)
             {
-                switch (raritiesToFilterOut[i])
+                switch (operatorRarityLists.raritiesToFilterOut[i])
                 {
                     case "1*":
                         {
-                            for (int x = 0; x < oneStarOperators.Count; x++)
+                            for (int x = 0; x < operatorRarityLists.oneStarOperators.Count; x++)
                             {
-                                userOps.Remove(oneStarOperators[x]);
-                                userMedicOperators.Remove(oneStarOperators[x]);
-                                userSupporterOperators.Remove(oneStarOperators[x]);
-                                userSniperOperators.Remove(oneStarOperators[x]);
-                                userVanguardOperators.Remove(oneStarOperators[x]);
-                                userSpecialistOperators.Remove(oneStarOperators[x]);
-                                userDefenderOperators.Remove(oneStarOperators[x]);
-                                userGuardOperators.Remove(oneStarOperators[x]);
-                                userCasterOperators.Remove(oneStarOperators[x]);
+                                userOps.Remove(operatorRarityLists.oneStarOperators[x]);
+                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.oneStarOperators[x]);
+                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.oneStarOperators[x]);
+                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.oneStarOperators[x]);
+                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.oneStarOperators[x]);
+                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.oneStarOperators[x]);
+                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.oneStarOperators[x]);
+                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.oneStarOperators[x]);
+                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.oneStarOperators[x]);
 
                             }
 
@@ -355,17 +311,17 @@ namespace ArknightsRandomizerWinForm
 
                     case "2*":
                         {
-                            for (int x = 0; x < twoStarOperators.Count; x++)
+                            for (int x = 0; x < operatorRarityLists.twoStarOperators.Count; x++)
                             {
-                                userOps.Remove(twoStarOperators[x]);
-                                userMedicOperators.Remove(twoStarOperators[x]);
-                                userSupporterOperators.Remove(twoStarOperators[x]);
-                                userSniperOperators.Remove(twoStarOperators[x]);
-                                userVanguardOperators.Remove(twoStarOperators[x]);
-                                userSpecialistOperators.Remove(twoStarOperators[x]);
-                                userDefenderOperators.Remove(twoStarOperators[x]);
-                                userGuardOperators.Remove(twoStarOperators[x]);
-                                userCasterOperators.Remove(twoStarOperators[x]);
+                                userOps.Remove(operatorRarityLists.twoStarOperators[x]);
+                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.twoStarOperators[x]);
+                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.twoStarOperators[x]);
+                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.twoStarOperators[x]);
+                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.twoStarOperators[x]);
+                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.twoStarOperators[x]);
+                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.twoStarOperators[x]);
+                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.twoStarOperators[x]);
+                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.twoStarOperators[x]);
                             }
 
                             break;
@@ -373,17 +329,17 @@ namespace ArknightsRandomizerWinForm
 
                     case "3*":
                         {
-                            for (int x = 0; x < threeStarOperators.Count; x++)
+                            for (int x = 0; x < operatorRarityLists.threeStarOperators.Count; x++)
                             {
-                                userOps.Remove(threeStarOperators[x]);
-                                userMedicOperators.Remove(threeStarOperators[x]);
-                                userSupporterOperators.Remove(threeStarOperators[x]);
-                                userSniperOperators.Remove(threeStarOperators[x]);
-                                userVanguardOperators.Remove(threeStarOperators[x]);
-                                userSpecialistOperators.Remove(threeStarOperators[x]);
-                                userDefenderOperators.Remove(threeStarOperators[x]);
-                                userGuardOperators.Remove(threeStarOperators[x]);
-                                userCasterOperators.Remove(threeStarOperators[x]);
+                                userOps.Remove(operatorRarityLists.threeStarOperators[x]);
+                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.threeStarOperators[x]);
+                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.threeStarOperators[x]);
+                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.threeStarOperators[x]);
+                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.threeStarOperators[x]);
+                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.threeStarOperators[x]);
+                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.threeStarOperators[x]);
+                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.threeStarOperators[x]);
+                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.threeStarOperators[x]);
                             }
 
                             break;
@@ -391,17 +347,17 @@ namespace ArknightsRandomizerWinForm
 
                     case "4*":
                         {
-                            for (int x = 0; x < fourStarOperators.Count; x++)
+                            for (int x = 0; x < operatorRarityLists.fourStarOperators.Count; x++)
                             {
-                                userOps.Remove(fourStarOperators[x]);
-                                userMedicOperators.Remove(fourStarOperators[x]);
-                                userSupporterOperators.Remove(fourStarOperators[x]);
-                                userSniperOperators.Remove(fourStarOperators[x]);
-                                userVanguardOperators.Remove(fourStarOperators[x]);
-                                userSpecialistOperators.Remove(fourStarOperators[x]);
-                                userDefenderOperators.Remove(fourStarOperators[x]);
-                                userGuardOperators.Remove(fourStarOperators[x]);
-                                userCasterOperators.Remove(fourStarOperators[x]);
+                                userOps.Remove(operatorRarityLists.fourStarOperators[x]);
+                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.fourStarOperators[x]);
+                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.fourStarOperators[x]);
+                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.fourStarOperators[x]);
+                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.fourStarOperators[x]);
+                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.fourStarOperators[x]);
+                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.fourStarOperators[x]);
+                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.fourStarOperators[x]);
+                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.fourStarOperators[x]);
 
                             }
 
@@ -410,17 +366,17 @@ namespace ArknightsRandomizerWinForm
 
                     case "5*":
                         {
-                            for (int x = 0; x < fiveStarOperators.Count; x++)
+                            for (int x = 0; x < operatorRarityLists.fiveStarOperators.Count; x++)
                             {
-                                userOps.Remove(fiveStarOperators[x]);
-                                userMedicOperators.Remove(fiveStarOperators[x]);
-                                userSupporterOperators.Remove(fiveStarOperators[x]);
-                                userSniperOperators.Remove(fiveStarOperators[x]);
-                                userVanguardOperators.Remove(fiveStarOperators[x]);
-                                userSpecialistOperators.Remove(fiveStarOperators[x]);
-                                userDefenderOperators.Remove(fiveStarOperators[x]);
-                                userGuardOperators.Remove(fiveStarOperators[x]);
-                                userCasterOperators.Remove(fiveStarOperators[x]);
+                                userOps.Remove(operatorRarityLists.fiveStarOperators[x]);
+                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
+                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
+                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
+                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
+                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
+                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
+                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
+                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
 
                             }
 
@@ -429,24 +385,21 @@ namespace ArknightsRandomizerWinForm
 
                     case "6*":
                         {
-                            for (int x = 0; x < sixStarOperators.Count; x++)
+                            for (int x = 0; x < operatorRarityLists.sixStarOperators.Count; x++)
                             {
-                                userOps.Remove(sixStarOperators[x]);
-                                userMedicOperators.Remove(sixStarOperators[x]);
-                                userSupporterOperators.Remove(sixStarOperators[x]);
-                                userSniperOperators.Remove(sixStarOperators[x]);
-                                userVanguardOperators.Remove(sixStarOperators[x]);
-                                userSpecialistOperators.Remove(sixStarOperators[x]);
-                                userDefenderOperators.Remove(sixStarOperators[x]);
-                                userGuardOperators.Remove(sixStarOperators[x]);
-                                userCasterOperators.Remove(sixStarOperators[x]);
-
+                                userOps.Remove(operatorRarityLists.sixStarOperators[x]);
+                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.sixStarOperators[x]);
+                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.sixStarOperators[x]);
+                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.sixStarOperators[x]);
+                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.sixStarOperators[x]);
+                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.sixStarOperators[x]);
+                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.sixStarOperators[x]);
+                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.sixStarOperators[x]);
+                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.sixStarOperators[x]);
                             }
 
                             break;
                         }
-
-
                 }
             }
         }
@@ -515,20 +468,18 @@ namespace ArknightsRandomizerWinForm
 
         public static void Roll_For_Stage()
         {
-            
+            Wipe_A_List_Clean(stageLists.userStages);
 
-            Wipe_A_List_Clean(stageLists.UserStages);
-
-            foreach (string stages in stageLists.UserStagesDefault)
+            foreach (string stages in stageLists.userStagesDefault)
             {
-                stageLists.UserStages.Add(stages);
+                stageLists.userStages.Add(stages);
             }
 
             Filter_Out_Unselected_Stages_From_Pool_Of_Maps();
 
             try
             {
-                selectedStage = stageLists.UserStages[randomNumberGenerator.Next(0, stageLists.UserStages.Count)];
+                selectedStage = stageLists.userStages[randomNumberGenerator.Next(0, stageLists.userStages.Count)];
             }
             catch (ArgumentOutOfRangeException)
             {
@@ -537,15 +488,15 @@ namespace ArknightsRandomizerWinForm
         }
         public static void Filter_Out_Unselected_Stages_From_Pool_Of_Maps()
         {
-            for (int i = 0; i < chaptersToFilterOut.Count; i++)
+            for (int i = 0; i < stageLists.chaptersToFilterOut.Count; i++)
             {
-                switch (chaptersToFilterOut[i])
+                switch (stageLists.chaptersToFilterOut[i])
                 {
                     case "Prologue":
                         {
-                            for (int x = 0; x < stageLists.PrologueStages.Count; x++)
+                            for (int x = 0; x < stageLists.prologueStages.Count; x++)
                             {
-                                stageLists.UserStages.Remove(stageLists.PrologueStages[x]);
+                                stageLists.userStages.Remove(stageLists.prologueStages[x]);
                             }
 
                             break;
@@ -553,9 +504,9 @@ namespace ArknightsRandomizerWinForm
 
                     case "Chapter 1":
                         {
-                            for (int x = 0; x < stageLists.ChapterOneStages.Count; x++)
+                            for (int x = 0; x < stageLists.chapterOneStages.Count; x++)
                             {
-                                stageLists.UserStages.Remove(stageLists.ChapterOneStages[x]);
+                                stageLists.userStages.Remove(stageLists.chapterOneStages[x]);
                             }
 
                             break;
@@ -563,9 +514,9 @@ namespace ArknightsRandomizerWinForm
 
                     case "Chapter 2":
                         {
-                            for (int x = 0; x < stageLists.ChapterTwoStages.Count; x++)
+                            for (int x = 0; x < stageLists.chapterTwoStages.Count; x++)
                             {
-                                stageLists.UserStages.Remove(stageLists.ChapterTwoStages[x]);
+                                stageLists.userStages.Remove(stageLists.chapterTwoStages[x]);
                             }
 
                             break;
@@ -573,9 +524,9 @@ namespace ArknightsRandomizerWinForm
 
                     case "Chapter 3":
                         {
-                            for (int x = 0; x < stageLists.ChapterThreeStages.Count; x++)
+                            for (int x = 0; x < stageLists.chapterThreeStages.Count; x++)
                             {
-                                stageLists.UserStages.Remove(stageLists.ChapterThreeStages[x]);
+                                stageLists.userStages.Remove(stageLists.chapterThreeStages[x]);
                             }
 
                             break;
@@ -583,9 +534,9 @@ namespace ArknightsRandomizerWinForm
 
                     case "Chapter 4":
                         {
-                            for (int x = 0; x < stageLists.ChapterFourStages.Count; x++)
+                            for (int x = 0; x < stageLists.chapterFourStages.Count; x++)
                             {
-                                stageLists.UserStages.Remove(stageLists.ChapterFourStages[x]);
+                                stageLists.userStages.Remove(stageLists.chapterFourStages[x]);
                             }
 
                             break;
@@ -593,9 +544,9 @@ namespace ArknightsRandomizerWinForm
 
                     case "Chapter 5":
                         {
-                            for (int x = 0; x < stageLists.ChapterFiveStages.Count; x++)
+                            for (int x = 0; x < stageLists.chapterFiveStages.Count; x++)
                             {
-                                stageLists.UserStages.Remove(stageLists.ChapterFiveStages[x]);
+                                stageLists.userStages.Remove(stageLists.chapterFiveStages[x]);
                             }
 
                             break;
@@ -603,9 +554,9 @@ namespace ArknightsRandomizerWinForm
 
                     case "Chapter 6":
                         {
-                            for (int x = 0; x < stageLists.ChapterSixStages.Count; x++)
+                            for (int x = 0; x < stageLists.chapterSixStages.Count; x++)
                             {
-                                stageLists.UserStages.Remove(stageLists.ChapterSixStages[x]);
+                                stageLists.userStages.Remove(stageLists.chapterSixStages[x]);
                             }
 
                             break;
@@ -613,9 +564,9 @@ namespace ArknightsRandomizerWinForm
 
                     case "Chapter 7":
                         {
-                            for (int x = 0; x < stageLists.ChapterSevenStages.Count; x++)
+                            for (int x = 0; x < stageLists.chapterSevenStages.Count; x++)
                             {
-                                stageLists.UserStages.Remove(stageLists.ChapterSevenStages[x]);
+                                stageLists.userStages.Remove(stageLists.chapterSevenStages[x]);
                             }
 
                             break;
@@ -627,107 +578,107 @@ namespace ArknightsRandomizerWinForm
 
         public static void Populate_UserOps_Lists()
         {
-            Wipe_A_List_Clean(userMedicOperators);
-            Wipe_A_List_Clean(userSupporterOperators);
-            Wipe_A_List_Clean(userSniperOperators);
-            Wipe_A_List_Clean(userVanguardOperators);
-            Wipe_A_List_Clean(userSpecialistOperators);
-            Wipe_A_List_Clean(userDefenderOperators);
-            Wipe_A_List_Clean(userGuardOperators);
-            Wipe_A_List_Clean(userCasterOperators);
+            Wipe_A_List_Clean(operatorClassesLists.userMedicOperators);
+            Wipe_A_List_Clean(operatorClassesLists.userSupporterOperators);
+            Wipe_A_List_Clean(operatorClassesLists.userSniperOperators);
+            Wipe_A_List_Clean(operatorClassesLists.userVanguardOperators);
+            Wipe_A_List_Clean(operatorClassesLists.userSpecialistOperators);
+            Wipe_A_List_Clean(operatorClassesLists.userDefenderOperators);
+            Wipe_A_List_Clean(operatorClassesLists.userGuardOperators);
+            Wipe_A_List_Clean(operatorClassesLists.userCasterOperators);
 
             for (int i = 0; i < userOps.Count; i++)
             {
-                 for (int x = 0; x < medicOperators.Count; x++)
+                 for (int x = 0; x < operatorClassesLists.medicOperators.Count; x++)
                 {
-                    if (userOps[i] == medicOperators[x])
+                    if (userOps[i] == operatorClassesLists.medicOperators[x])
                     {
-                        userMedicOperators.Add(medicOperators[x]);
-                        defaultUserMedicOperators.Add(medicOperators[x]);
+                        operatorClassesLists.userMedicOperators.Add(operatorClassesLists.medicOperators[x]);
+                        operatorClassesLists.defaultUserMedicOperators.Add(operatorClassesLists.medicOperators[x]);
                     }
                 }
             }
 
             for (int i = 0; i < userOps.Count; i++)
             {
-                for (int x = 0; x < supporterOperators.Count; x++)
+                for (int x = 0; x < operatorClassesLists.supporterOperators.Count; x++)
                 {
-                    if (userOps[i] == supporterOperators[x])
+                    if (userOps[i] == operatorClassesLists.supporterOperators[x])
                     {
-                        userSupporterOperators.Add(supporterOperators[x]);
-                        defaultUserSupporterOperators.Add(supporterOperators[x]);
+                        operatorClassesLists.userSupporterOperators.Add(operatorClassesLists.supporterOperators[x]);
+                        operatorClassesLists.defaultUserSupporterOperators.Add(operatorClassesLists.supporterOperators[x]);
                     }
                 }
             }
 
             for (int i = 0; i < userOps.Count; i++)
             {
-                for (int x = 0; x < sniperOperators.Count; x++)
+                for (int x = 0; x < operatorClassesLists.sniperOperators.Count; x++)
                 {
-                    if (userOps[i] == sniperOperators[x])
+                    if (userOps[i] == operatorClassesLists.sniperOperators[x])
                     {
-                        userSniperOperators.Add(sniperOperators[x]);
-                        defaultUserSniperOperators.Add(sniperOperators[x]);
+                        operatorClassesLists.userSniperOperators.Add(operatorClassesLists.sniperOperators[x]);
+                        operatorClassesLists.defaultUserSniperOperators.Add(operatorClassesLists.sniperOperators[x]);
                     }
                 }
             }
 
             for (int i = 0; i < userOps.Count; i++)
             {
-                for (int x = 0; x < vanguardOperators.Count; x++)
+                for (int x = 0; x < operatorClassesLists.vanguardOperators.Count; x++)
                 {
-                    if (userOps[i] == vanguardOperators[x])
+                    if (userOps[i] == operatorClassesLists.vanguardOperators[x])
                     {
-                        userVanguardOperators.Add(vanguardOperators[x]);
-                        defaultUserVanguardOperators.Add(vanguardOperators[x]);
+                        operatorClassesLists.userVanguardOperators.Add(operatorClassesLists.vanguardOperators[x]);
+                        operatorClassesLists.defaultUserVanguardOperators.Add(operatorClassesLists.vanguardOperators[x]);
                     }
                 }
             }
 
             for (int i = 0; i < userOps.Count; i++)
             {
-                for (int x = 0; x < specialistOperators.Count; x++)
+                for (int x = 0; x < operatorClassesLists.specialistOperators.Count; x++)
                 {
-                    if (userOps[i] == specialistOperators[x])
+                    if (userOps[i] == operatorClassesLists.specialistOperators[x])
                     {
-                        userSpecialistOperators.Add(specialistOperators[x]);
-                        defaultUserSpecialistOperators.Add(specialistOperators[x]); 
+                        operatorClassesLists.userSpecialistOperators.Add(operatorClassesLists.specialistOperators[x]);
+                        operatorClassesLists.defaultUserSpecialistOperators.Add(operatorClassesLists.specialistOperators[x]); 
                     }
                 }
             }
 
             for (int i = 0; i < userOps.Count; i++)
             {
-                for (int x = 0; x < defenderOperators.Count; x++)
+                for (int x = 0; x < operatorClassesLists.defenderOperators.Count; x++)
                 {
-                    if (userOps[i] == defenderOperators[x])
+                    if (userOps[i] == operatorClassesLists.defenderOperators[x])
                     {
-                        userDefenderOperators.Add(defenderOperators[x]);
-                        defaultUserDefenderOperators.Add(defenderOperators[x]);
+                        operatorClassesLists.userDefenderOperators.Add(operatorClassesLists.defenderOperators[x]);
+                        operatorClassesLists.defaultUserDefenderOperators.Add(operatorClassesLists.defenderOperators[x]);
                     }
                 }
             }
 
             for (int i = 0; i < userOps.Count; i++)
             {
-                for (int x = 0; x < guardOperators.Count; x++)
+                for (int x = 0; x < operatorClassesLists.guardOperators.Count; x++)
                 {
-                    if (userOps[i] == guardOperators[x])
+                    if (userOps[i] == operatorClassesLists.guardOperators[x])
                     {
-                        userGuardOperators.Add(guardOperators[x]);
-                        defaultUserGuardOperators.Add(guardOperators[x]);
+                        operatorClassesLists.userGuardOperators.Add(operatorClassesLists.guardOperators[x]);
+                        operatorClassesLists.defaultUserGuardOperators.Add(operatorClassesLists.guardOperators[x]);
                     }
                 }
             }
 
             for (int i = 0; i < userOps.Count; i++)
             {
-                for (int x = 0; x < casterOperators.Count; x++)
+                for (int x = 0; x < operatorClassesLists.casterOperators.Count; x++)
                 {
-                    if (userOps[i] == casterOperators[x])
+                    if (userOps[i] == operatorClassesLists.casterOperators[x])
                     {
-                        userCasterOperators.Add(casterOperators[x]);
-                        defaultUserCasterOperators.Add(casterOperators[x]);
+                        operatorClassesLists.userCasterOperators.Add(operatorClassesLists.casterOperators[x]);
+                        operatorClassesLists.defaultUserCasterOperators.Add(operatorClassesLists.casterOperators[x]);
                     }
                 }
             }

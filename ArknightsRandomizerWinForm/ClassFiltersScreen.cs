@@ -68,37 +68,37 @@ namespace ArknightsRandomizerWinForm
 
         private void ClassFiltersBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Program.Wipe_A_List_Clean(Program.classesToFilterOut);
+            Program.Wipe_A_List_Clean(Program.operatorClassesLists.classesToFilterOut);
             
             for (int i = 0; i < ClassFiltersBox.Items.Count; i++)
             {
                 if (ClassFiltersBox.GetItemChecked(i) == false)
                 {
-                    Program.classesToFilterOut.Add(ClassFiltersBox.Items[i].ToString());
+                    Program.operatorClassesLists.classesToFilterOut.Add(ClassFiltersBox.Items[i].ToString());
                 }
             }
         }
         private void RarityFiltersBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            Program.Wipe_A_List_Clean(Program.raritiesToFilterOut);
+            Program.Wipe_A_List_Clean(Program.operatorRarityLists.raritiesToFilterOut);
 
             for (int i = 0; i < RarityFiltersBox.Items.Count; i++)
             {
                 if (RarityFiltersBox.GetItemChecked(i) == false)
                 {
-                    Program.raritiesToFilterOut.Add(RarityFiltersBox.Items[i].ToString());
+                    Program.operatorRarityLists.raritiesToFilterOut.Add(RarityFiltersBox.Items[i].ToString());
                 }
             }
         }
         private void ChapterFiltersBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Program.Wipe_A_List_Clean(Program.chaptersToFilterOut);
+            Program.Wipe_A_List_Clean(Program.stageLists.chaptersToFilterOut);
 
             for (int i = 0; i < ChapterFiltersBox.Items.Count; i++)
             {
                 if (ChapterFiltersBox.GetItemChecked(i) == false)
                 {
-                    Program.chaptersToFilterOut.Add(ChapterFiltersBox.Items[i].ToString());
+                    Program.stageLists.chaptersToFilterOut.Add(ChapterFiltersBox.Items[i].ToString());
                 }
             }
         }
