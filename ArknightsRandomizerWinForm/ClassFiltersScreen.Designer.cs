@@ -498,12 +498,12 @@ namespace ArknightsRandomizerWinForm
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(607, 259);
+            this.label12.Location = new System.Drawing.Point(632, 259);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(164, 13);
+            this.label12.Size = new System.Drawing.Size(96, 13);
             this.label12.TabIndex = 14;
-            this.label12.Text = "Include At Least This Number Of:";
+            this.label12.Text = "Include AT MOST:";
             // 
             // RollStageButton
             // 

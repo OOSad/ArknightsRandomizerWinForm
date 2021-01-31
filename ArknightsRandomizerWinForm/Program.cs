@@ -157,13 +157,21 @@ namespace ArknightsRandomizerWinForm
             Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps();
 
             Add_Ops_To_Potential_List(medicLimit, operatorClassesLists.userMedicOperators);
+            Remove_Class_From_UserOps_List(medicLimit, userOps, operatorClassesLists.userMedicOperators);
             Add_Ops_To_Potential_List(supporterLimit, operatorClassesLists.userSupporterOperators);
+            Remove_Class_From_UserOps_List(supporterLimit, userOps, operatorClassesLists.userSupporterOperators);
             Add_Ops_To_Potential_List(sniperLimit, operatorClassesLists.userSniperOperators);
+            Remove_Class_From_UserOps_List(sniperLimit, userOps, operatorClassesLists.userSniperOperators);
             Add_Ops_To_Potential_List(vanguardLimit, operatorClassesLists.userVanguardOperators);
+            Remove_Class_From_UserOps_List(vanguardLimit, userOps, operatorClassesLists.userVanguardOperators);
             Add_Ops_To_Potential_List(specialistLimit, operatorClassesLists.userSpecialistOperators);
+            Remove_Class_From_UserOps_List(specialistLimit, userOps, operatorClassesLists.userSpecialistOperators);
             Add_Ops_To_Potential_List(defenderLimit, operatorClassesLists.userDefenderOperators);
+            Remove_Class_From_UserOps_List(defenderLimit, userOps, operatorClassesLists.userDefenderOperators);
             Add_Ops_To_Potential_List(guardLimit, operatorClassesLists.userGuardOperators);
+            Remove_Class_From_UserOps_List(guardLimit, userOps, operatorClassesLists.userGuardOperators);
             Add_Ops_To_Potential_List(casterLimit, operatorClassesLists.userCasterOperators);
+            Remove_Class_From_UserOps_List(casterLimit, userOps, operatorClassesLists.userCasterOperators);
 
             Add_PotentialOps_List_To_List_Of_RolledOps_And_Increment_SquadSize();
 
@@ -419,6 +427,23 @@ namespace ArknightsRandomizerWinForm
                 catch (ArgumentOutOfRangeException)
                 {
                     potentialOpsToRoll.Add("No Ops Found!");
+                }
+            }
+        }
+
+        public static void Remove_Class_From_UserOps_List(int specificClassLimit, List<string> userOpsList, List<string> classListToRemove)
+        {
+            if (specificClassLimit != 0)
+            {
+                for (int i = 0; i < classListToRemove.Count; i++)
+                {
+                    for (int x = 0; x < userOpsList.Count; x++)
+                    {
+                        if (classListToRemove[i] == userOpsList[x])
+                        {
+                            userOpsList.RemoveAt(x);
+                        }
+                    }
                 }
             }
         }
