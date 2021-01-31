@@ -138,9 +138,12 @@ namespace ArknightsRandomizerWinForm
         {
             currentSquadSize = 0;
 
-            Wipe_A_List_Clean(rolledOps);
-            Wipe_A_List_Clean(userOps);
-            Wipe_A_List_Clean(potentialOpsToRoll);
+            Wipe_One_Or_More_Lists_Clean(rolledOps, userOps, potentialOpsToRoll);
+
+            foreach (string operators in rolledOps)
+            {
+                Debug.WriteLine("Penis!");
+            }
 
             Read_UserOps_From_File(userOps);
 
@@ -181,13 +184,17 @@ namespace ArknightsRandomizerWinForm
 
             Sort_A_List_Alphabetically(rolledOps);
         }
-        public static void Wipe_A_List_Clean(List<string> listToClearOut)
+
+        public static void Wipe_One_Or_More_Lists_Clean(params List<string>[] values)
         {
-            listToClearOut.Clear();
+            foreach (List<string> lists in values)
+            {
+                lists.Clear();
+            }
         }
         public static void Reset_A_List_To_Its_Default_Values(List<string> listToReset, List<string> listOfDefaults)
         {
-            Wipe_A_List_Clean(listToReset);
+            Wipe_One_Or_More_Lists_Clean(listToReset);
             for (int i = 0; i < listOfDefaults.Count; i++)
             {
                 listToReset.Add(listOfDefaults[i]);
@@ -493,7 +500,7 @@ namespace ArknightsRandomizerWinForm
 
         public static void Roll_For_Stage()
         {
-            Wipe_A_List_Clean(stageLists.userStages);
+            Wipe_One_Or_More_Lists_Clean(stageLists.userStages);
 
             foreach (string stages in stageLists.userStagesDefault)
             {
@@ -603,14 +610,7 @@ namespace ArknightsRandomizerWinForm
 
         public static void Populate_UserOps_Lists()
         {
-            Wipe_A_List_Clean(operatorClassesLists.userMedicOperators);
-            Wipe_A_List_Clean(operatorClassesLists.userSupporterOperators);
-            Wipe_A_List_Clean(operatorClassesLists.userSniperOperators);
-            Wipe_A_List_Clean(operatorClassesLists.userVanguardOperators);
-            Wipe_A_List_Clean(operatorClassesLists.userSpecialistOperators);
-            Wipe_A_List_Clean(operatorClassesLists.userDefenderOperators);
-            Wipe_A_List_Clean(operatorClassesLists.userGuardOperators);
-            Wipe_A_List_Clean(operatorClassesLists.userCasterOperators);
+            Wipe_One_Or_More_Lists_Clean(operatorClassesLists.userMedicOperators, operatorClassesLists.userSupporterOperators, operatorClassesLists.userSniperOperators, operatorClassesLists.userVanguardOperators, operatorClassesLists.userSpecialistOperators, operatorClassesLists.userDefenderOperators, operatorClassesLists.userGuardOperators, operatorClassesLists.userCasterOperators);
 
             for (int i = 0; i < userOps.Count; i++)
             {
