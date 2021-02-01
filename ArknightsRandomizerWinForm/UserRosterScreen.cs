@@ -28,7 +28,7 @@ namespace ArknightsRandomizerWinForm
         {
             Program.Write_UserOps_To_File(RosterBox);
             Program.Populate_UserOps_Lists();
-            Program.Hide_Current_Form_Then_Open_Next_Form(this, new ClassFiltersScreen());
+            FormSwapper.Hide_Current_Form_Then_Open_Next_Form(this, new ClassFiltersScreen());
         }
 
         private void UserRosterScreen_FormClosing(object sender, FormClosingEventArgs e)

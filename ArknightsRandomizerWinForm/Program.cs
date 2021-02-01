@@ -95,12 +95,6 @@ namespace ArknightsRandomizerWinForm
         }
 
 
-        public static void Hide_Current_Form_Then_Open_Next_Form(Form currentForm, Form nextForm)
-        {
-            currentForm.Hide();
-            nextForm.Show();
-            nextForm.Location = new System.Drawing.Point(currentForm.Left, currentForm.Top);
-        }
         public static void Update_Operator_Labels_On_Form(Form targetForm)
         {
             int x = 0;

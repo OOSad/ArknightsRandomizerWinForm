@@ -62,7 +62,7 @@ namespace ArknightsRandomizerWinForm
         }
         private void BackToRosterButton_Click(object sender, EventArgs e)
         {
-            Program.Hide_Current_Form_Then_Open_Next_Form(this, new UserRosterScreen());
+            FormSwapper.Hide_Current_Form_Then_Open_Next_Form(this, new UserRosterScreen());
         }
 
 
