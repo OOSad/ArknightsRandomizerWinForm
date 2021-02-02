@@ -156,6 +156,7 @@ namespace ArknightsRandomizerWinForm
             "Saria",
             "Savage",
             "Scavenger",
+            "Scene",
             "Schwarz",
             "Sesa",
             "Shamare",

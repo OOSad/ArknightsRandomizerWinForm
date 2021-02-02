@@ -12,7 +12,7 @@ namespace ArknightsRandomizerWinForm
         public List<string> userMedicOperators = new List<string>() { };
         public List<string> defaultUserMedicOperators = new List<string>() { };
 
-        public List<string> supporterOperators = new List<string>() { "Suzuran", "Podenco", "Tsukinogi", "Shamare", "Magallan", "Glaucus", "Angelina", "Sora", "Istina", "Pramanix", "Mayer", "Earthspirit", "Deepcolor", "Orchid" };
+        public List<string> supporterOperators = new List<string>() { "Scene", "Suzuran", "Podenco", "Tsukinogi", "Shamare", "Magallan", "Glaucus", "Angelina", "Sora", "Istina", "Pramanix", "Mayer", "Earthspirit", "Deepcolor", "Orchid" };
         public List<string> userSupporterOperators = new List<string>() { };
         public List<string> defaultUserSupporterOperators = new List<string>() { };
 
