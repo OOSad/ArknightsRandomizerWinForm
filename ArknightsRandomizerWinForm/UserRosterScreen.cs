@@ -18,15 +18,15 @@ namespace ArknightsRandomizerWinForm
         {
             InitializeComponent();
 
-            Program.Create_UserOps_File();
+            UserOpsFileHandler.Create_UserOps_File();
             Program.Wipe_One_Or_More_Lists_Clean(Program.userOps);
-            Program.Read_UserOps_From_File(Program.userOps);
+            UserOpsFileHandler.Read_UserOps_From_File(Program.userOps);
             Program.Check_All_The_Checkboxes_In_A_Page_Based_On_A_List(Program.userOps, RosterBox);
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            Program.Write_UserOps_To_File(RosterBox);
+            UserOpsFileHandler.Write_UserOps_To_File(RosterBox);
             Program.Populate_UserOps_Lists();
             FormSwapper.Hide_Current_Form_Then_Open_Next_Form(this, new ClassFiltersScreen());
         }

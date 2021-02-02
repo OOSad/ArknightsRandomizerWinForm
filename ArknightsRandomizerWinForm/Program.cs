@@ -43,39 +43,7 @@ namespace ArknightsRandomizerWinForm
         }
 
 
-        public static void Create_UserOps_File()
-        {
-            if (!File.Exists("userOps.txt"))
-            {
-                using (StreamWriter sw = File.CreateText("userOps.txt"))
-                {
-                    sw.WriteLine("");
-                }
-            }
-        }
-        public static List<string> Read_UserOps_From_File(List<string> listToSaveUserOpsTo)
-        {
-
-            foreach (string operators in File.ReadAllLines("userOps.txt"))
-            {
-                listToSaveUserOpsTo.Add(operators); 
-            }
-
-            return listToSaveUserOpsTo;
-        }
-        public static void Write_UserOps_To_File(CheckedListBox checkboxesToReadFrom)
-        {
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine("userOps.txt")))
-            {
-                for (int i = 0; i < checkboxesToReadFrom.Items.Count; i++)
-                {
-                    if (checkboxesToReadFrom.GetItemChecked(i) == true)
-                    {
-                        outputFile.WriteLine(checkboxesToReadFrom.Items[i]);
-                    }
-                }
-            }
-        }
+        
 
 
         public static CheckedListBox Check_All_The_Checkboxes_In_A_Page_Based_On_A_List(List<string> listOfOpsToApply, CheckedListBox checkboxesToApplyTo)
@@ -134,12 +102,7 @@ namespace ArknightsRandomizerWinForm
 
             Wipe_One_Or_More_Lists_Clean(rolledOps, userOps, potentialOpsToRoll);
 
-            foreach (string operators in rolledOps)
-            {
-                Debug.WriteLine("Penis!");
-            }
-
-            Read_UserOps_From_File(userOps);
+            UserOpsFileHandler.Read_UserOps_From_File(userOps);
 
             Reset_A_List_To_Its_Default_Values(operatorClassesLists.userMedicOperators, operatorClassesLists.defaultUserMedicOperators);
             Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSupporterOperators, operatorClassesLists.defaultUserSupporterOperators);
