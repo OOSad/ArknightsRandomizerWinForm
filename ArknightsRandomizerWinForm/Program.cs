@@ -59,7 +59,7 @@ namespace ArknightsRandomizerWinForm
             ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userGuardOperators, operatorClassesLists.defaultUserGuardOperators);
             ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userCasterOperators, operatorClassesLists.defaultUserCasterOperators);
 
-            Filter_Out_Unselected_Classes_From_Pool_Of_UserOps();
+            ClassesFilter.Filter_Out_Unselected_Classes_From_Pool_Of_UserOps(operatorClassesLists, userOps);
             Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps();
 
             Add_Ops_To_Potential_List(medicLimit, operatorClassesLists.userMedicOperators);
@@ -91,104 +91,6 @@ namespace ArknightsRandomizerWinForm
         
 
         
-        public static void Filter_Out_Unselected_Classes_From_Pool_Of_UserOps()
-        {
-            for (int i = 0; i < operatorClassesLists.classesToFilterOut.Count; i++)
-            {
-                switch (operatorClassesLists.classesToFilterOut[i])
-                {
-                    case "Medics":
-                        {
-                            for (int x = 0; x < operatorClassesLists.medicOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorClassesLists.medicOperators[x]);
-                                operatorClassesLists.userMedicOperators.Remove(operatorClassesLists.medicOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    case "Supporters":
-                        {
-                            for (int x = 0; x < operatorClassesLists.supporterOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorClassesLists.supporterOperators[x]);
-                                operatorClassesLists.userSupporterOperators.Remove(operatorClassesLists.supporterOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    case "Snipers":
-                        {
-                            for (int x = 0; x < operatorClassesLists.sniperOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorClassesLists.sniperOperators[x]);
-                                operatorClassesLists.userSniperOperators.Remove(operatorClassesLists.sniperOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    case "Vanguards":
-                        {
-                            for (int x = 0; x < operatorClassesLists.vanguardOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorClassesLists.vanguardOperators[x]);
-                                operatorClassesLists.userVanguardOperators.Remove(operatorClassesLists.vanguardOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    case "Specialists":
-                        {
-                            for (int x = 0; x < operatorClassesLists.specialistOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorClassesLists.specialistOperators[x]);
-                                operatorClassesLists.userSpecialistOperators.Remove(operatorClassesLists.specialistOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    case "Defenders":
-                        {
-                            for (int x = 0; x < operatorClassesLists.defenderOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorClassesLists.defenderOperators[x]);
-                                operatorClassesLists.userDefenderOperators.Remove(operatorClassesLists.defenderOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    case "Guards":
-                        {
-                            for (int x = 0; x < operatorClassesLists.guardOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorClassesLists.guardOperators[x]);
-                                operatorClassesLists.userGuardOperators.Remove(operatorClassesLists.guardOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    case "Casters":
-                        {
-                            for (int x = 0; x < operatorClassesLists.casterOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorClassesLists.casterOperators[x]);
-                                operatorClassesLists.userCasterOperators.Remove(operatorClassesLists.casterOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    default: { break; }
-                }
-            }
-        }
         public static void Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps()
 
         {

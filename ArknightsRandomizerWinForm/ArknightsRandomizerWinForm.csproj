@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckboxChecker.cs" />
+    <Compile Include="ClassesFilter.cs" />
     <Compile Include="ClassFiltersScreen.cs">
       <SubType>Form</SubType>
     </Compile>
