@@ -66,6 +66,7 @@
     <Compile Include="ListWiper.cs" />
     <Compile Include="OperatorClassLists.cs" />
     <Compile Include="OperatorRarityLists.cs" />
+    <Compile Include="RaritiesFilter.cs" />
     <Compile Include="StageLists.cs" />
     <Compile Include="UserOpsFileHandler.cs" />
     <Compile Include="UserRosterScreen.cs">

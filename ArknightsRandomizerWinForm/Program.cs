@@ -60,7 +60,7 @@ namespace ArknightsRandomizerWinForm
             ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userCasterOperators, operatorClassesLists.defaultUserCasterOperators);
 
             ClassesFilter.Filter_Out_Unselected_Classes_From_Pool_Of_UserOps(operatorClassesLists, userOps);
-            Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps();
+            RaritiesFilter.Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps(operatorRarityLists, operatorClassesLists, userOps);
 
             Add_Ops_To_Potential_List(medicLimit, operatorClassesLists.userMedicOperators);
             Remove_Class_From_UserOps_List(medicLimit, userOps, operatorClassesLists.userMedicOperators);
@@ -88,129 +88,7 @@ namespace ArknightsRandomizerWinForm
             Sort_A_List_Alphabetically(rolledOps);
         }
 
-        
 
-        
-        public static void Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps()
-
-        {
-            for (int i = 0; i < operatorRarityLists.raritiesToFilterOut.Count; i++)
-            {
-                switch (operatorRarityLists.raritiesToFilterOut[i])
-                {
-                    case "1*":
-                        {
-                            for (int x = 0; x < operatorRarityLists.oneStarOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorRarityLists.oneStarOperators[x]);
-                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.oneStarOperators[x]);
-                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.oneStarOperators[x]);
-                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.oneStarOperators[x]);
-                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.oneStarOperators[x]);
-                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.oneStarOperators[x]);
-                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.oneStarOperators[x]);
-                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.oneStarOperators[x]);
-                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.oneStarOperators[x]);
-
-                            }
-
-                            break;
-                        }
-
-                    case "2*":
-                        {
-                            for (int x = 0; x < operatorRarityLists.twoStarOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorRarityLists.twoStarOperators[x]);
-                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.twoStarOperators[x]);
-                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.twoStarOperators[x]);
-                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.twoStarOperators[x]);
-                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.twoStarOperators[x]);
-                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.twoStarOperators[x]);
-                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.twoStarOperators[x]);
-                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.twoStarOperators[x]);
-                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.twoStarOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    case "3*":
-                        {
-                            for (int x = 0; x < operatorRarityLists.threeStarOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorRarityLists.threeStarOperators[x]);
-                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.threeStarOperators[x]);
-                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.threeStarOperators[x]);
-                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.threeStarOperators[x]);
-                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.threeStarOperators[x]);
-                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.threeStarOperators[x]);
-                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.threeStarOperators[x]);
-                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.threeStarOperators[x]);
-                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.threeStarOperators[x]);
-                            }
-
-                            break;
-                        }
-
-                    case "4*":
-                        {
-                            for (int x = 0; x < operatorRarityLists.fourStarOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorRarityLists.fourStarOperators[x]);
-                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.fourStarOperators[x]);
-                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.fourStarOperators[x]);
-                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.fourStarOperators[x]);
-                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.fourStarOperators[x]);
-                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.fourStarOperators[x]);
-                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.fourStarOperators[x]);
-                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.fourStarOperators[x]);
-                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.fourStarOperators[x]);
-
-                            }
-
-                            break;
-                        }
-
-                    case "5*":
-                        {
-                            for (int x = 0; x < operatorRarityLists.fiveStarOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorRarityLists.fiveStarOperators[x]);
-                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
-                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
-                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
-                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
-                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
-                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
-                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
-                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.fiveStarOperators[x]);
-
-                            }
-
-                            break;
-                        }
-
-                    case "6*":
-                        {
-                            for (int x = 0; x < operatorRarityLists.sixStarOperators.Count; x++)
-                            {
-                                userOps.Remove(operatorRarityLists.sixStarOperators[x]);
-                                operatorClassesLists.userMedicOperators.Remove(operatorRarityLists.sixStarOperators[x]);
-                                operatorClassesLists.userSupporterOperators.Remove(operatorRarityLists.sixStarOperators[x]);
-                                operatorClassesLists.userSniperOperators.Remove(operatorRarityLists.sixStarOperators[x]);
-                                operatorClassesLists.userVanguardOperators.Remove(operatorRarityLists.sixStarOperators[x]);
-                                operatorClassesLists.userSpecialistOperators.Remove(operatorRarityLists.sixStarOperators[x]);
-                                operatorClassesLists.userDefenderOperators.Remove(operatorRarityLists.sixStarOperators[x]);
-                                operatorClassesLists.userGuardOperators.Remove(operatorRarityLists.sixStarOperators[x]);
-                                operatorClassesLists.userCasterOperators.Remove(operatorRarityLists.sixStarOperators[x]);
-                            }
-
-                            break;
-                        }
-                }
-            }
-        }
         public static void Add_Ops_To_Potential_List(int specificClassLimit, List<string> userOpsListToRemoveFrom)
         {
             if (specificClassLimit != 0)
