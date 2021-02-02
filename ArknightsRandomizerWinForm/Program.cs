@@ -42,10 +42,6 @@ namespace ArknightsRandomizerWinForm
             Application.Run(new UserRosterScreen());
         }
 
-
-        
-
-
         public static void Roll_Ops_And_Create_Roster(int maxSquadSize)
         {
             currentSquadSize = 0;
