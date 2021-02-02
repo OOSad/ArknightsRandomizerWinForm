@@ -46,18 +46,18 @@ namespace ArknightsRandomizerWinForm
         {
             currentSquadSize = 0;
 
-            Wipe_One_Or_More_Lists_Clean(rolledOps, userOps, potentialOpsToRoll);
+            ListWiper.Wipe_Many_Lists_Clean(rolledOps, userOps, potentialOpsToRoll);
 
             UserOpsFileHandler.Read_UserOps_From_File(userOps);
 
-            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userMedicOperators, operatorClassesLists.defaultUserMedicOperators);
-            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSupporterOperators, operatorClassesLists.defaultUserSupporterOperators);
-            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSniperOperators, operatorClassesLists.defaultUserSniperOperators);
-            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userVanguardOperators, operatorClassesLists.defaultUserVanguardOperators);
-            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSpecialistOperators, operatorClassesLists.defaultUserSpecialistOperators);
-            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userDefenderOperators, operatorClassesLists.defaultUserDefenderOperators);
-            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userGuardOperators, operatorClassesLists.defaultUserGuardOperators);
-            Reset_A_List_To_Its_Default_Values(operatorClassesLists.userCasterOperators, operatorClassesLists.defaultUserCasterOperators);
+            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userMedicOperators, operatorClassesLists.defaultUserMedicOperators);
+            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSupporterOperators, operatorClassesLists.defaultUserSupporterOperators);
+            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSniperOperators, operatorClassesLists.defaultUserSniperOperators);
+            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userVanguardOperators, operatorClassesLists.defaultUserVanguardOperators);
+            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSpecialistOperators, operatorClassesLists.defaultUserSpecialistOperators);
+            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userDefenderOperators, operatorClassesLists.defaultUserDefenderOperators);
+            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userGuardOperators, operatorClassesLists.defaultUserGuardOperators);
+            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userCasterOperators, operatorClassesLists.defaultUserCasterOperators);
 
             Filter_Out_Unselected_Classes_From_Pool_Of_UserOps();
             Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps();
@@ -88,21 +88,9 @@ namespace ArknightsRandomizerWinForm
             Sort_A_List_Alphabetically(rolledOps);
         }
 
-        public static void Wipe_One_Or_More_Lists_Clean(params List<string>[] values)
-        {
-            foreach (List<string> lists in values)
-            {
-                lists.Clear();
-            }
-        }
-        public static void Reset_A_List_To_Its_Default_Values(List<string> listToReset, List<string> listOfDefaults)
-        {
-            Wipe_One_Or_More_Lists_Clean(listToReset);
-            for (int i = 0; i < listOfDefaults.Count; i++)
-            {
-                listToReset.Add(listOfDefaults[i]);
-            }
-        }
+        
+
+        
         public static void Filter_Out_Unselected_Classes_From_Pool_Of_UserOps()
         {
             for (int i = 0; i < operatorClassesLists.classesToFilterOut.Count; i++)
@@ -403,7 +391,7 @@ namespace ArknightsRandomizerWinForm
 
         public static void Roll_For_Stage()
         {
-            Wipe_One_Or_More_Lists_Clean(stageLists.userStages);
+            ListWiper.Wipe_A_List_Clean(stageLists.userStages);
 
             foreach (string stages in stageLists.userStagesDefault)
             {
@@ -513,7 +501,7 @@ namespace ArknightsRandomizerWinForm
 
         public static void Populate_UserOps_Lists()
         {
-            Wipe_One_Or_More_Lists_Clean(operatorClassesLists.userMedicOperators, operatorClassesLists.userSupporterOperators, operatorClassesLists.userSniperOperators, operatorClassesLists.userVanguardOperators, operatorClassesLists.userSpecialistOperators, operatorClassesLists.userDefenderOperators, operatorClassesLists.userGuardOperators, operatorClassesLists.userCasterOperators);
+            ListWiper.Wipe_Many_Lists_Clean(operatorClassesLists.userMedicOperators, operatorClassesLists.userSupporterOperators, operatorClassesLists.userSniperOperators, operatorClassesLists.userVanguardOperators, operatorClassesLists.userSpecialistOperators, operatorClassesLists.userDefenderOperators, operatorClassesLists.userGuardOperators, operatorClassesLists.userCasterOperators);
 
             for (int i = 0; i < userOps.Count; i++)
             {

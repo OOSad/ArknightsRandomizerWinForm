@@ -42,7 +42,7 @@ namespace ArknightsRandomizerWinForm
 
         private void ClassFiltersBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Program.Wipe_One_Or_More_Lists_Clean(Program.operatorClassesLists.classesToFilterOut);
+            ListWiper.Wipe_A_List_Clean(Program.operatorClassesLists.classesToFilterOut);
             
             for (int i = 0; i < ClassFiltersBox.Items.Count; i++)
             {
@@ -54,7 +54,7 @@ namespace ArknightsRandomizerWinForm
         }
         private void RarityFiltersBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            Program.Wipe_One_Or_More_Lists_Clean(Program.operatorRarityLists.raritiesToFilterOut);
+            ListWiper.Wipe_A_List_Clean(Program.operatorRarityLists.raritiesToFilterOut);
 
             for (int i = 0; i < RarityFiltersBox.Items.Count; i++)
             {
@@ -66,7 +66,7 @@ namespace ArknightsRandomizerWinForm
         }
         private void ChapterFiltersBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Program.Wipe_One_Or_More_Lists_Clean(Program.stageLists.chaptersToFilterOut);
+            ListWiper.Wipe_A_List_Clean(Program.stageLists.chaptersToFilterOut);
 
             for (int i = 0; i < ChapterFiltersBox.Items.Count; i++)
             {

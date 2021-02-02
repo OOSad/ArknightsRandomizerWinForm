@@ -61,6 +61,8 @@
     </Compile>
     <Compile Include="FormSwapper.cs" />
     <Compile Include="LabelUpdater.cs" />
+    <Compile Include="ListResetter.cs" />
+    <Compile Include="ListWiper.cs" />
     <Compile Include="OperatorClassLists.cs" />
     <Compile Include="OperatorRarityLists.cs" />
     <Compile Include="StageLists.cs" />
