@@ -85,7 +85,7 @@ namespace ArknightsRandomizerWinForm
 
             Add_RandomUserOps_To_List_Of_RolledOps(maxSquadSize);
 
-            Sort_A_List_Alphabetically(rolledOps);
+            ListSorter.Sort_A_List_Alphabetically(rolledOps);
         }
 
 
@@ -162,10 +162,6 @@ namespace ArknightsRandomizerWinForm
                 catch (ArgumentOutOfRangeException)
                 { rolledOps.Add("No Ops Found!"); }
             }
-        }
-        public static void Sort_A_List_Alphabetically(List<string> listToSort)
-        {
-            listToSort.Sort();
         }
 
 
