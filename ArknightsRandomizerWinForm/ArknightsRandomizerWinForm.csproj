@@ -60,6 +60,7 @@
       <DependentUpon>ClassFiltersScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSwapper.cs" />
+    <Compile Include="LabelUpdater.cs" />
     <Compile Include="OperatorClassLists.cs" />
     <Compile Include="OperatorRarityLists.cs" />
     <Compile Include="StageLists.cs" />
