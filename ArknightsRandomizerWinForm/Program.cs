@@ -46,22 +46,6 @@ namespace ArknightsRandomizerWinForm
         
 
 
-        public static CheckedListBox Check_All_The_Checkboxes_In_A_Page_Based_On_A_List(List<string> listOfOpsToApply, CheckedListBox checkboxesToApplyTo)
-        {
-            for (int i = 0; i < listOfOpsToApply.Count; i++)
-            {
-                for (int x = 0; x < checkboxesToApplyTo.Items.Count; x++)
-                {
-                    if ((string)checkboxesToApplyTo.Items[x] == listOfOpsToApply[i])
-                    {
-                        checkboxesToApplyTo.SetItemChecked(x, true);
-                    }
-                }
-            }
-
-            return checkboxesToApplyTo;
-        }
-
 
         public static void Update_Operator_Labels_On_Form(Form targetForm)
         {

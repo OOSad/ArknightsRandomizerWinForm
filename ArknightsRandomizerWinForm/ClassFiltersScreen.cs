@@ -16,38 +16,12 @@ namespace ArknightsRandomizerWinForm
         public ClassFiltersScreen()
         {
             InitializeComponent();
-            Check_Every_Checkbox_On_This_Form();
+            CheckboxChecker.Check_Every_Checkbox_On_This_Form(this);
             Set_SquadSize_Slider_To_Max();
             Program.Set_SquadSize_To_Max();
             
         }
 
-        private void Check_Every_Checkbox_On_This_Form()
-        {
-            for (int i = 0; i < ClassFiltersBox.Items.Count; i++)
-            {
-                if (ClassFiltersBox.GetItemChecked(i) == false)
-                {
-                    ClassFiltersBox.SetItemChecked(i, true);
-                }
-            }
-
-            for (int i = 0; i < RarityFiltersBox.Items.Count; i++)
-            {
-                if (RarityFiltersBox.GetItemChecked(i) == false)
-                {
-                    RarityFiltersBox.SetItemChecked(i, true);
-                }
-            }
-
-            for (int i = 0; i < ChapterFiltersBox.Items.Count; i++)
-            {
-                if (ChapterFiltersBox.GetItemChecked(i) == false)
-                {
-                    ChapterFiltersBox.SetItemChecked(i, true);
-                }
-            }
-        }
 
 
         private void RollButton_Click(object sender, EventArgs e)

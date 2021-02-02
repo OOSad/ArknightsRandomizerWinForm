@@ -21,7 +21,7 @@ namespace ArknightsRandomizerWinForm
             UserOpsFileHandler.Create_UserOps_File();
             Program.Wipe_One_Or_More_Lists_Clean(Program.userOps);
             UserOpsFileHandler.Read_UserOps_From_File(Program.userOps);
-            Program.Check_All_The_Checkboxes_In_A_Page_Based_On_A_List(Program.userOps, RosterBox);
+            CheckboxChecker.Check_All_The_Checkboxes_In_A_Page_Based_On_A_List(Program.userOps, RosterBox);
         }
 
         private void NextButton_Click(object sender, EventArgs e)
