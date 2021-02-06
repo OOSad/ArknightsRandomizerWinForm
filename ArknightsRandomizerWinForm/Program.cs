@@ -62,108 +62,31 @@ namespace ArknightsRandomizerWinForm
             ClassesFilter.Filter_Out_Unselected_Classes_From_Pool_Of_UserOps(operatorClassesLists, userOps);
             RaritiesFilter.Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps(operatorRarityLists, operatorClassesLists, userOps);
 
-            Add_Ops_To_Potential_List(medicLimit, operatorClassesLists.userMedicOperators);
-            Remove_Class_From_UserOps_List(medicLimit, userOps, operatorClassesLists.userMedicOperators);
-            Add_Ops_To_Potential_List(supporterLimit, operatorClassesLists.userSupporterOperators);
-            Remove_Class_From_UserOps_List(supporterLimit, userOps, operatorClassesLists.userSupporterOperators);
-            Add_Ops_To_Potential_List(sniperLimit, operatorClassesLists.userSniperOperators);
-            Remove_Class_From_UserOps_List(sniperLimit, userOps, operatorClassesLists.userSniperOperators);
-            Add_Ops_To_Potential_List(vanguardLimit, operatorClassesLists.userVanguardOperators);
-            Remove_Class_From_UserOps_List(vanguardLimit, userOps, operatorClassesLists.userVanguardOperators);
-            Add_Ops_To_Potential_List(specialistLimit, operatorClassesLists.userSpecialistOperators);
-            Remove_Class_From_UserOps_List(specialistLimit, userOps, operatorClassesLists.userSpecialistOperators);
-            Add_Ops_To_Potential_List(defenderLimit, operatorClassesLists.userDefenderOperators);
-            Remove_Class_From_UserOps_List(defenderLimit, userOps, operatorClassesLists.userDefenderOperators);
-            Add_Ops_To_Potential_List(guardLimit, operatorClassesLists.userGuardOperators);
-            Remove_Class_From_UserOps_List(guardLimit, userOps, operatorClassesLists.userGuardOperators);
-            Add_Ops_To_Potential_List(casterLimit, operatorClassesLists.userCasterOperators);
-            Remove_Class_From_UserOps_List(casterLimit, userOps, operatorClassesLists.userCasterOperators);
+            PotentialOpsAdder.Add_Ops_To_Potential_List(medicLimit, operatorClassesLists.userMedicOperators, randomNumberGenerator, potentialOpsToRoll);
+            UserOpsClassRemover.Remove_Class_From_UserOps_List(medicLimit, userOps, operatorClassesLists.userMedicOperators);
+            PotentialOpsAdder.Add_Ops_To_Potential_List(supporterLimit, operatorClassesLists.userSupporterOperators, randomNumberGenerator, potentialOpsToRoll);
+            UserOpsClassRemover.Remove_Class_From_UserOps_List(supporterLimit, userOps, operatorClassesLists.userSupporterOperators);
+            PotentialOpsAdder.Add_Ops_To_Potential_List(sniperLimit, operatorClassesLists.userSniperOperators, randomNumberGenerator, potentialOpsToRoll);
+            UserOpsClassRemover.Remove_Class_From_UserOps_List(sniperLimit, userOps, operatorClassesLists.userSniperOperators);
+            PotentialOpsAdder.Add_Ops_To_Potential_List(vanguardLimit, operatorClassesLists.userVanguardOperators, randomNumberGenerator, potentialOpsToRoll);
+            UserOpsClassRemover.Remove_Class_From_UserOps_List(vanguardLimit, userOps, operatorClassesLists.userVanguardOperators);
+            PotentialOpsAdder.Add_Ops_To_Potential_List(specialistLimit, operatorClassesLists.userSpecialistOperators, randomNumberGenerator, potentialOpsToRoll);
+            UserOpsClassRemover.Remove_Class_From_UserOps_List(specialistLimit, userOps, operatorClassesLists.userSpecialistOperators);
+            PotentialOpsAdder.Add_Ops_To_Potential_List(defenderLimit, operatorClassesLists.userDefenderOperators, randomNumberGenerator, potentialOpsToRoll);
+            UserOpsClassRemover.Remove_Class_From_UserOps_List(defenderLimit, userOps, operatorClassesLists.userDefenderOperators);
+            PotentialOpsAdder.Add_Ops_To_Potential_List(guardLimit, operatorClassesLists.userGuardOperators, randomNumberGenerator, potentialOpsToRoll);
+            UserOpsClassRemover.Remove_Class_From_UserOps_List(guardLimit, userOps, operatorClassesLists.userGuardOperators);
+            PotentialOpsAdder.Add_Ops_To_Potential_List(casterLimit, operatorClassesLists.userCasterOperators, randomNumberGenerator, potentialOpsToRoll);
+            UserOpsClassRemover.Remove_Class_From_UserOps_List(casterLimit, userOps, operatorClassesLists.userCasterOperators);
 
-            Add_PotentialOps_List_To_List_Of_RolledOps_And_Increment_SquadSize();
+            PotentialOpsToRolledOpsAdder.Add_PotentialOps_List_To_List_Of_RolledOps_And_Increment_SquadSize(potentialOpsToRoll, rolledOps, currentSquadSize);
 
-            Remove_PotentialOps_From_The_List_Of_UserOps();
+            PotentialOpsFromUserOpsRemover.Remove_PotentialOps_From_The_List_Of_UserOps(potentialOpsToRoll, userOps);
 
-            Add_RandomUserOps_To_List_Of_RolledOps(maxSquadSize);
+            RandomUserOpsToRolledOpsAdder.Add_RandomUserOps_To_List_Of_RolledOps(maxSquadSize, currentSquadSize, randomNumberGenerator, userOps, rolledOps);
 
             ListSorter.Sort_A_List_Alphabetically(rolledOps);
         }
-
-
-        public static void Add_Ops_To_Potential_List(int specificClassLimit, List<string> userOpsListToRemoveFrom)
-        {
-            if (specificClassLimit != 0)
-            {
-                try
-                {
-                    for (int i = 0; i < specificClassLimit; i++)
-                    {
-                        int x = randomNumberGenerator.Next(0, userOpsListToRemoveFrom.Count);
-                        potentialOpsToRoll.Add(userOpsListToRemoveFrom[x]);
-                        userOpsListToRemoveFrom.RemoveAt(x);
-                    }
-                }
-                catch (ArgumentOutOfRangeException)
-                {
-                    potentialOpsToRoll.Add("No Ops Found!");
-                }
-            }
-        }
-
-        public static void Remove_Class_From_UserOps_List(int specificClassLimit, List<string> userOpsList, List<string> classListToRemove)
-        {
-            if (specificClassLimit != 0)
-            {
-                for (int i = 0; i < classListToRemove.Count; i++)
-                {
-                    for (int x = 0; x < userOpsList.Count; x++)
-                    {
-                        if (classListToRemove[i] == userOpsList[x])
-                        {
-                            userOpsList.RemoveAt(x);
-                        }
-                    }
-                }
-            }
-        }
-        public static void Add_PotentialOps_List_To_List_Of_RolledOps_And_Increment_SquadSize()
-        {
-            if (potentialOpsToRoll.Count != 0)
-            {
-                for (int i = 0; i < potentialOpsToRoll.Count; i++)
-                {
-                    rolledOps.Add(potentialOpsToRoll[i]);
-                    currentSquadSize++;
-                }
-            }
-        }
-        public static void Remove_PotentialOps_From_The_List_Of_UserOps()
-        {
-            for (int i = 0; i < potentialOpsToRoll.Count; i++)
-            {
-                for (int x = 0; x < userOps.Count; x++)
-                {
-                    if (userOps[x] == potentialOpsToRoll[i])
-                    {
-                        userOps.RemoveAt(x);
-                    }
-                }
-            }
-        }
-        public static void Add_RandomUserOps_To_List_Of_RolledOps(int maxSquadSize)
-        {
-            for (int i = currentSquadSize; i < maxSquadSize; i++)
-            {
-                try
-                {
-                    int x = randomNumberGenerator.Next(0, userOps.Count);
-                    rolledOps.Add(userOps[x]);
-                    userOps.RemoveAt(x);
-                }
-                catch (ArgumentOutOfRangeException)
-                { rolledOps.Add("No Ops Found!"); }
-            }
-        }
-
 
         public static void Roll_For_Stage()
         {
@@ -185,8 +108,6 @@ namespace ArknightsRandomizerWinForm
                 selectedStage = "Stage Not Found!";
             }
         }
-        
-
 
         public static void Populate_UserOps_Lists()
         {

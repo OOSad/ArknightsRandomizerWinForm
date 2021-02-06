@@ -67,9 +67,14 @@
     <Compile Include="ListWiper.cs" />
     <Compile Include="OperatorClassLists.cs" />
     <Compile Include="OperatorRarityLists.cs" />
+    <Compile Include="PotentialOpsAdder.cs" />
+    <Compile Include="PotentialOpsFromUserOpsRemover.cs" />
+    <Compile Include="PotentialOpsToRolledOpsAdder.cs" />
+    <Compile Include="RandomUserOpsToRolledOpsAdder.cs" />
     <Compile Include="RaritiesFilter.cs" />
     <Compile Include="StageFilter.cs" />
     <Compile Include="StageLists.cs" />
+    <Compile Include="UserOpsClassRemover.cs" />
     <Compile Include="UserOpsFileHandler.cs" />
     <Compile Include="UserRosterScreen.cs">
       <SubType>Form</SubType>
