@@ -60,6 +60,7 @@
     <Compile Include="ClassFiltersScreen.Designer.cs">
       <DependentUpon>ClassFiltersScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="DefaultSquadSizeHandler.cs" />
     <Compile Include="FormSwapper.cs" />
     <Compile Include="LabelUpdater.cs" />
     <Compile Include="ListResetter.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="OperatorClassLists.cs" />
     <Compile Include="OperatorRarityLists.cs" />
     <Compile Include="RaritiesFilter.cs" />
+    <Compile Include="StageFilter.cs" />
     <Compile Include="StageLists.cs" />
     <Compile Include="UserOpsFileHandler.cs" />
     <Compile Include="UserRosterScreen.cs">

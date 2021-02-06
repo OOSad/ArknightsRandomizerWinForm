@@ -291,10 +291,5 @@ namespace ArknightsRandomizerWinForm
         }
 
 
-        public static void Set_SquadSize_To_Max()
-        {
-            squadSize = 12;
-        }
-
     }
 }
