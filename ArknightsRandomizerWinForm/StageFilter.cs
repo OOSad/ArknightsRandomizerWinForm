@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArknightsRandomizerWinForm
 {
-    class StageFilter
+    static class StageFilter
     {
         public static void Filter_Out_Unselected_Stages_From_Pool_Of_Maps(StageLists stageLists)
         {

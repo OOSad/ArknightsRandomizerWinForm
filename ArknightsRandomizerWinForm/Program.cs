@@ -173,7 +173,7 @@ namespace ArknightsRandomizerWinForm
             {
                 stageLists.userStages.Add(stages);
             }
-
+            
             StageFilter.Filter_Out_Unselected_Stages_From_Pool_Of_Maps(stageLists);
 
             try
