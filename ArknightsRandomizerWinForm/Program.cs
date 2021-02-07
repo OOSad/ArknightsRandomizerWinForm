@@ -21,8 +21,7 @@ namespace ArknightsRandomizerWinForm
 
         public static Random randomNumberGenerator = new Random();
 
-        public static int squadSize = 1;
-        public static int currentSquadSize = 1;
+        public static int maxSquadSize = 1;
         public static int medicLimit = 0;
         public static int supporterLimit = 0;
         public static int sniperLimit = 0;
@@ -44,7 +43,7 @@ namespace ArknightsRandomizerWinForm
 
         public static void Roll_Ops_And_Create_Roster(int maxSquadSize)
         {
-            currentSquadSize = 0;
+            int currentSquadSize = 0;
 
             ListWiper.Wipe_Many_Lists_Clean(rolledOps, userOps, potentialOpsToRoll);
 
@@ -214,7 +213,7 @@ namespace ArknightsRandomizerWinForm
 
         public static void Set_SquadSize_To_Max()
         {
-            squadSize = 12;
+            maxSquadSize = 12;
         }
 
     }

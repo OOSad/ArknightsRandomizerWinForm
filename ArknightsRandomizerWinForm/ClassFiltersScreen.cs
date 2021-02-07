@@ -19,14 +19,13 @@ namespace ArknightsRandomizerWinForm
             CheckboxChecker.Check_Every_Checkbox_On_This_Form(this);
             Set_SquadSize_Slider_To_Max();
             Program.Set_SquadSize_To_Max();
-            
         }
 
 
 
         private void RollButton_Click(object sender, EventArgs e)
         {
-            Program.Roll_Ops_And_Create_Roster(Program.squadSize);
+            Program.Roll_Ops_And_Create_Roster(Program.maxSquadSize);
             LabelUpdater.Update_Operator_Labels_On_Form(this, Program.rolledOps);
         }
         private void RollStageButton_Click(object sender, EventArgs e)
@@ -80,7 +79,7 @@ namespace ArknightsRandomizerWinForm
 
         private void SquadSizeTrackbar_Scroll(object sender, EventArgs e)
         {
-            Program.squadSize = SquadSizeTrackbar.Value + 1;
+            Program.maxSquadSize = SquadSizeTrackbar.Value + 1;
         }
         private void Set_SquadSize_Slider_To_Max()
         {
