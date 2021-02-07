@@ -18,7 +18,7 @@ namespace ArknightsRandomizerWinForm
             InitializeComponent();
             CheckboxChecker.Check_Every_Checkbox_On_This_Form(this);
             Set_SquadSize_Slider_To_Max();
-            Program.Set_SquadSize_To_Max();
+            Program.maxSquadSize = SquadSizeMaxer.Set_SquadSize_To_Max(Program.maxSquadSize);
         }
 
 
