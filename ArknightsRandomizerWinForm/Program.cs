@@ -49,14 +49,13 @@ namespace ArknightsRandomizerWinForm
 
             UserOpsFileHandler.Read_UserOps_From_File(userOps);
 
-            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userMedicOperators, operatorClassesLists.defaultUserMedicOperators);
-            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSupporterOperators, operatorClassesLists.defaultUserSupporterOperators);
-            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSniperOperators, operatorClassesLists.defaultUserSniperOperators);
-            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userVanguardOperators, operatorClassesLists.defaultUserVanguardOperators);
-            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userSpecialistOperators, operatorClassesLists.defaultUserSpecialistOperators);
-            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userDefenderOperators, operatorClassesLists.defaultUserDefenderOperators);
-            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userGuardOperators, operatorClassesLists.defaultUserGuardOperators);
-            ListResetter.Reset_A_List_To_Its_Default_Values(operatorClassesLists.userCasterOperators, operatorClassesLists.defaultUserCasterOperators);
+            List<List<string>> listsToReset = new List<List<string>>() {operatorClassesLists.userMedicOperators, operatorClassesLists.userSupporterOperators, operatorClassesLists.userSniperOperators, operatorClassesLists.userVanguardOperators, operatorClassesLists.userSpecialistOperators, operatorClassesLists.userDefenderOperators, operatorClassesLists.userGuardOperators, operatorClassesLists.userCasterOperators };
+            List<List<string>> listsOfDefaults = new List<List<string>>() { operatorClassesLists.defaultUserMedicOperators, operatorClassesLists.defaultUserSupporterOperators, operatorClassesLists.defaultUserSniperOperators, operatorClassesLists.defaultUserVanguardOperators, operatorClassesLists.defaultUserSpecialistOperators, operatorClassesLists.defaultUserDefenderOperators, operatorClassesLists.defaultUserGuardOperators, operatorClassesLists.defaultUserCasterOperators };
+
+            for (int i = 0; i < listsOfDefaults.Count; i++)
+            {
+                ListResetter.Reset_A_List_To_Its_Default_Values(listsToReset[i], listsOfDefaults[i]);
+            }
 
             ClassesFilter.Filter_Out_Unselected_Classes_From_Pool_Of_UserOps(operatorClassesLists, userOps);
             RaritiesFilter.Filter_Out_Unselected_Rarities_From_Pool_Of_UserOps(operatorRarityLists, operatorClassesLists, userOps);
