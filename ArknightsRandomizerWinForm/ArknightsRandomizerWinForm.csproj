@@ -67,6 +67,7 @@
     <Compile Include="ListWiper.cs" />
     <Compile Include="OperatorClassLists.cs" />
     <Compile Include="OperatorRarityLists.cs" />
+    <Compile Include="OpsRoller.cs" />
     <Compile Include="PotentialOpsAdder.cs" />
     <Compile Include="PotentialOpsFromUserOpsRemover.cs" />
     <Compile Include="PotentialOpsToRolledOpsAdder.cs" />
