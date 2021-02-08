@@ -75,6 +75,7 @@
     <Compile Include="SquadSizeMaxer.cs" />
     <Compile Include="StageFilter.cs" />
     <Compile Include="StageLists.cs" />
+    <Compile Include="StageRoller.cs" />
     <Compile Include="UserOpsClassRemover.cs" />
     <Compile Include="UserOpsFileHandler.cs" />
     <Compile Include="UserOpsPopulator.cs" />

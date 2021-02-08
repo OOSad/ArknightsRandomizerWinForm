@@ -49,7 +49,7 @@ namespace ArknightsRandomizerWinForm
 
             UserOpsFileHandler.Read_UserOps_From_File(userOps);
 
-            List<List<string>> listsToReset = new List<List<string>>() {operatorClassesLists.userMedicOperators, operatorClassesLists.userSupporterOperators, operatorClassesLists.userSniperOperators, operatorClassesLists.userVanguardOperators, operatorClassesLists.userSpecialistOperators, operatorClassesLists.userDefenderOperators, operatorClassesLists.userGuardOperators, operatorClassesLists.userCasterOperators };
+            List<List<string>> listsToReset = new List<List<string>>() { operatorClassesLists.userMedicOperators, operatorClassesLists.userSupporterOperators, operatorClassesLists.userSniperOperators, operatorClassesLists.userVanguardOperators, operatorClassesLists.userSpecialistOperators, operatorClassesLists.userDefenderOperators, operatorClassesLists.userGuardOperators, operatorClassesLists.userCasterOperators };
             List<List<string>> listsOfDefaults = new List<List<string>>() { operatorClassesLists.defaultUserMedicOperators, operatorClassesLists.defaultUserSupporterOperators, operatorClassesLists.defaultUserSniperOperators, operatorClassesLists.defaultUserVanguardOperators, operatorClassesLists.defaultUserSpecialistOperators, operatorClassesLists.defaultUserDefenderOperators, operatorClassesLists.defaultUserGuardOperators, operatorClassesLists.defaultUserCasterOperators };
 
             for (int i = 0; i < listsOfDefaults.Count; i++)
@@ -86,26 +86,7 @@ namespace ArknightsRandomizerWinForm
             ListSorter.Sort_A_List_Alphabetically(rolledOps);
         }
 
-        public static void Roll_For_Stage()
-        {
-            ListWiper.Wipe_A_List_Clean(stageLists.userStages);
-
-            foreach (string stages in stageLists.userStagesDefault)
-            {
-                stageLists.userStages.Add(stages);
-            }
-            
-            StageFilter.Filter_Out_Unselected_Stages_From_Pool_Of_Maps(stageLists);
-
-            try
-            {
-                selectedStage = stageLists.userStages[randomNumberGenerator.Next(0, stageLists.userStages.Count)];
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                selectedStage = "Stage Not Found!";
-            }
-        }
+        
 
         
 

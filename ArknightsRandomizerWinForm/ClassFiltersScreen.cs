@@ -30,7 +30,7 @@ namespace ArknightsRandomizerWinForm
         }
         private void RollStageButton_Click(object sender, EventArgs e)
         {
-            Program.Roll_For_Stage();
+            Program.selectedStage = StageRoller.Roll_For_Stage();
             LabelUpdater.Update_Stage_Label_On_Form(this, Program.selectedStage);
         }
         private void BackToRosterButton_Click(object sender, EventArgs e)
