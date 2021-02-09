@@ -66,8 +66,10 @@
     <Compile Include="ListSorter.cs" />
     <Compile Include="ListWiper.cs" />
     <Compile Include="OperatorClassLists.cs" />
+    <Compile Include="OperatorIconNameFetcher.cs" />
     <Compile Include="OperatorRarityLists.cs" />
     <Compile Include="OpsRoller.cs" />
+    <Compile Include="PictureBoxUpdater.cs" />
     <Compile Include="PotentialOpsAdder.cs" />
     <Compile Include="PotentialOpsFromUserOpsRemover.cs" />
     <Compile Include="PotentialOpsToRolledOpsAdder.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

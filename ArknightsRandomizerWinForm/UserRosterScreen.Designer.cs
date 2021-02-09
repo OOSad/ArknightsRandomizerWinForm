@@ -52,7 +52,7 @@ namespace ArknightsRandomizerWinForm
             "Ansel",
             "Asbestos",
             "Astesia",
-            "Ayerscape",
+            "Ayerscarpe",
             "Bagpipe",
             "Beagle",
             "Beehunter",

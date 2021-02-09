@@ -32,7 +32,7 @@ namespace ArknightsRandomizerWinForm
         public List<string> userDefenderOperators = new List<string>() { };
         public List<string> defaultUserDefenderOperators = new List<string>() { };
 
-        public List<string> guardOperators = new List<string>() { "Thorns", "Ayerscape", "Sideroca", "Cutter", "Bibeak", "Utage", "Blaze", "Broca", "Flamebringer", "Hellagur", "Astesia", "Ch'en", "Swire", "Popukar", "Skadi", "Beehunter", "Midnight", "Savage", "SilverAsh", "Specter", "Lappland", "Indra", "Franka", "Mousse", "Estelle", "Frostleaf", "Matoimaru", "Dobermann", "Melantha", "Castle-3" };
+        public List<string> guardOperators = new List<string>() { "Thorns", "Ayerscarpe", "Sideroca", "Cutter", "Bibeak", "Utage", "Blaze", "Broca", "Flamebringer", "Hellagur", "Astesia", "Ch'en", "Swire", "Popukar", "Skadi", "Beehunter", "Midnight", "Savage", "SilverAsh", "Specter", "Lappland", "Indra", "Franka", "Mousse", "Estelle", "Frostleaf", "Matoimaru", "Dobermann", "Melantha", "Castle-3" };
         public List<string> userGuardOperators = new List<string>() { };
         public List<string> defaultUserGuardOperators = new List<string>() { };
 
