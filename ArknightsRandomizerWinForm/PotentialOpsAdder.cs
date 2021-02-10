@@ -10,6 +10,7 @@ namespace ArknightsRandomizerWinForm
     {
         public static void Add_Ops_To_Potential_List(int specificClassLimit, List<string> userOpsListToRemoveFrom, Random randomNumberGenerator, List<string> potentialOpsToRoll)
         {
+
             if (specificClassLimit != 0)
             {
                 try

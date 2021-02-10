@@ -30,7 +30,6 @@ namespace ArknightsRandomizerWinForm
                 try
                 {
                     pictureBoxes[i].ImageLocation = (@"OperatorIcons\" + (listOfOperatorsToPrintToPictureboxes[x] + "_icon.png"));
-                    Debug.WriteLine(@"OperatorIcons\" + (listOfOperatorsToPrintToPictureboxes[x] + "_icon.png"));
                     x++;
                                 
                 }

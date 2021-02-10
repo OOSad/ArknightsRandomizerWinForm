@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArknightsRandomizerWinForm
 {
-    class OperatorClassLists
+    public class OperatorClassLists
     {
         public List<string> medicOperators = new List<string>() { "Folinic", "Ceylon", "Breeze", "Sussurro", "Nightingale", "Shining", "Warfarin", "Silence", "Ptilopsis", "Perfumer", "Gavial", "Myrrh", "Ansel", "Hibiscus", "Lancet-2" };
         public List<string> userMedicOperators = new List<string>() { };

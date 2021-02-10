@@ -26,6 +26,7 @@ namespace ArknightsRandomizerWinForm
         private void RollButton_Click(object sender, EventArgs e)
         {
             OpsRoller.Roll_Ops_And_Create_Roster(Program.maxSquadSize);
+          
             LabelUpdater.Update_Operator_Labels_On_Form(this, Program.rolledOps);
             PictureBoxUpdater.Update_Pictureboxes_On_Form(this, Program.rolledOps);
         }

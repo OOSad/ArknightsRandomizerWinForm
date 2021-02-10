@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArknightsRandomizerWinForm
 {
-    class OperatorRarityLists
+    public class OperatorRarityLists
     {
         public List<string> oneStarOperators = new List<string>() { "THRM-EX", "Castle-3", "Lancet-2" };
         public List<string> twoStarOperators = new List<string>() { "12F", "Durin", "Rangers", "Noir Corne", "Yato" };

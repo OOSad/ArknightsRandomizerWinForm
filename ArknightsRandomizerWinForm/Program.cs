@@ -30,6 +30,8 @@ namespace ArknightsRandomizerWinForm
         public static int defenderLimit = 0;
         public static int guardLimit = 0;
         public static int casterLimit = 0;
+        
+
 
         public static string selectedStage = "";
 

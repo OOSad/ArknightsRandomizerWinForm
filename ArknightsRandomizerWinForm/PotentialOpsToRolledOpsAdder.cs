@@ -8,8 +8,10 @@ namespace ArknightsRandomizerWinForm
 {
     static class PotentialOpsToRolledOpsAdder
     {
-        public static void Add_PotentialOps_List_To_List_Of_RolledOps_And_Increment_SquadSize(List<string> potentialOpsToRoll, List<string> rolledOps, int currentSquadSize)
+        
+        public static int Add_PotentialOps_List_To_List_Of_RolledOps_And_Increment_SquadSize(List<string> potentialOpsToRoll, List<string> rolledOps, int currentSquadSize)
         {
+            
             if (potentialOpsToRoll.Count != 0)
             {
                 for (int i = 0; i < potentialOpsToRoll.Count; i++)
@@ -18,6 +20,8 @@ namespace ArknightsRandomizerWinForm
                     currentSquadSize++;
                 }
             }
+
+            return currentSquadSize;
         }
     }
 }

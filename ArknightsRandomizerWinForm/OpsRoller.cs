@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ArknightsRandomizerWinForm
 {
-    static class OpsRoller
+    class OpsRoller
     {
         public static void Roll_Ops_And_Create_Roster(int maxSquadSize)
         {
+            int currentSquadSize = 1;
             List<string> rolledOps = Program.rolledOps;
             List<string> userOps = Program.userOps;
             List<string> potentialOpsToRoll = Program.potentialOpsToRoll;
@@ -63,15 +65,32 @@ namespace ArknightsRandomizerWinForm
             PotentialOpsAdder.Add_Ops_To_Potential_List(casterLimit, operatorClassLists.userCasterOperators, randomNumberGenerator, potentialOpsToRoll);
             UserOpsClassRemover.Remove_Class_From_UserOps_List(casterLimit, userOps, operatorClassLists.userCasterOperators);
 
-            int currentSquadSize = 0;
+            foreach (string operators in potentialOpsToRoll ){ Debug.Write(operators + " "); }
+            Debug.WriteLine("");
 
-            PotentialOpsToRolledOpsAdder.Add_PotentialOps_List_To_List_Of_RolledOps_And_Increment_SquadSize(potentialOpsToRoll, rolledOps, currentSquadSize);
+
+            currentSquadSize = PotentialOpsToRolledOpsAdder.Add_PotentialOps_List_To_List_Of_RolledOps_And_Increment_SquadSize(potentialOpsToRoll, rolledOps, currentSquadSize);
+
+            Debug.WriteLine(currentSquadSize);
+
+            foreach (string operators in rolledOps) { Debug.Write(operators + " "); }
+            Debug.WriteLine("");
 
             PotentialOpsFromUserOpsRemover.Remove_PotentialOps_From_The_List_Of_UserOps(potentialOpsToRoll, userOps);
 
+
+
             RandomUserOpsToRolledOpsAdder.Add_RandomUserOps_To_List_Of_RolledOps(maxSquadSize, currentSquadSize, randomNumberGenerator, userOps, rolledOps);
 
+            foreach (string operators in rolledOps) { Debug.Write(operators + " "); }
+            Debug.WriteLine("");
+
+
             ListSorter.Sort_A_List_Alphabetically(rolledOps);
+
+            //foreach (string operators in rolledOps){Debug.Write(operators + " ");}
+
+            Debug.WriteLine("");
         }
     }
 }
