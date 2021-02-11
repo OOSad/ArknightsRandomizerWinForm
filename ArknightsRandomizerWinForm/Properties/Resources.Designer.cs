@@ -59,15 +59,5 @@ namespace ArknightsRandomizerWinForm.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Rhodes_Island {
-            get {
-                object obj = ResourceManager.GetObject("Rhodes_Island", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

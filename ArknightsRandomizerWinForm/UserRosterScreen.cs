@@ -17,7 +17,7 @@ namespace ArknightsRandomizerWinForm
         public UserRosterScreen()
         {
             InitializeComponent();
-
+            this.BackColor = default;
             UserOpsFileHandler.Create_UserOps_File();
             ListWiper.Wipe_A_List_Clean(Program.userOps);
             UserOpsFileHandler.Read_UserOps_From_File(Program.userOps);
