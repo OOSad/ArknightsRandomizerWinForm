@@ -28,12 +28,13 @@ namespace ArknightsRandomizerWinForm
             OpsRoller.Roll_Ops_And_Create_Roster(Program.maxSquadSize);
           
             LabelUpdater.Update_Operator_Labels_On_Form(this, Program.rolledOps);
-            PictureBoxUpdater.Update_Pictureboxes_On_Form(this, Program.rolledOps);
+            PictureBoxUpdater.Update_Operator_Pictureboxes_On_Form(this, Program.rolledOps);
         }
         private void RollStageButton_Click(object sender, EventArgs e)
         {
             Program.selectedStage = StageRoller.Roll_For_Stage();
             LabelUpdater.Update_Stage_Label_On_Form(this, Program.selectedStage);
+            PictureBoxUpdater.Update_Stage_Picturebox_On_Form(this, Program.selectedStage);
         }
         private void BackToRosterButton_Click(object sender, EventArgs e)
         {

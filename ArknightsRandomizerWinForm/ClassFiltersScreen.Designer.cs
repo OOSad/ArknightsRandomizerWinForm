@@ -72,7 +72,6 @@ namespace ArknightsRandomizerWinForm
             this.CastersLimitBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.RollStageButton = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.opPictureBox1 = new System.Windows.Forms.PictureBox();
             this.opPictureBox2 = new System.Windows.Forms.PictureBox();
@@ -86,6 +85,8 @@ namespace ArknightsRandomizerWinForm
             this.opPictureBox11 = new System.Windows.Forms.PictureBox();
             this.opPictureBox9 = new System.Windows.Forms.PictureBox();
             this.opPictureBox12 = new System.Windows.Forms.PictureBox();
+            this.StagePictureBox = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SquadSizeTrackbar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opPictureBox2)).BeginInit();
@@ -99,11 +100,13 @@ namespace ArknightsRandomizerWinForm
             ((System.ComponentModel.ISupportInitialize)(this.opPictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opPictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StagePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // RollButton
             // 
-            this.RollButton.Location = new System.Drawing.Point(265, 261);
+            this.RollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RollButton.Location = new System.Drawing.Point(292, 187);
             this.RollButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.RollButton.Name = "RollButton";
             this.RollButton.Size = new System.Drawing.Size(111, 23);
@@ -127,7 +130,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit12.AutoSize = true;
             this.unit12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit12.Location = new System.Drawing.Point(459, 210);
+            this.unit12.Location = new System.Drawing.Point(490, 167);
             this.unit12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit12.Name = "unit12";
             this.unit12.Size = new System.Drawing.Size(10, 13);
@@ -139,7 +142,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit9.AutoSize = true;
             this.unit9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit9.Location = new System.Drawing.Point(248, 210);
+            this.unit9.Location = new System.Drawing.Point(279, 167);
             this.unit9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit9.Name = "unit9";
             this.unit9.Size = new System.Drawing.Size(10, 13);
@@ -151,7 +154,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit4.AutoSize = true;
             this.unit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit4.Location = new System.Drawing.Point(316, 112);
+            this.unit4.Location = new System.Drawing.Point(347, 83);
             this.unit4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit4.Name = "unit4";
             this.unit4.Size = new System.Drawing.Size(10, 13);
@@ -163,7 +166,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit11.AutoSize = true;
             this.unit11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit11.Location = new System.Drawing.Point(387, 210);
+            this.unit11.Location = new System.Drawing.Point(418, 167);
             this.unit11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit11.Name = "unit11";
             this.unit11.Size = new System.Drawing.Size(10, 13);
@@ -175,7 +178,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit6.AutoSize = true;
             this.unit6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit6.Location = new System.Drawing.Point(459, 112);
+            this.unit6.Location = new System.Drawing.Point(490, 83);
             this.unit6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit6.Name = "unit6";
             this.unit6.Size = new System.Drawing.Size(10, 13);
@@ -187,7 +190,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit2.AutoSize = true;
             this.unit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit2.Location = new System.Drawing.Point(176, 112);
+            this.unit2.Location = new System.Drawing.Point(207, 83);
             this.unit2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit2.Name = "unit2";
             this.unit2.Size = new System.Drawing.Size(10, 13);
@@ -199,7 +202,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit10.AutoSize = true;
             this.unit10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit10.Location = new System.Drawing.Point(316, 210);
+            this.unit10.Location = new System.Drawing.Point(347, 167);
             this.unit10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit10.Name = "unit10";
             this.unit10.Size = new System.Drawing.Size(10, 13);
@@ -211,7 +214,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit8.AutoSize = true;
             this.unit8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit8.Location = new System.Drawing.Point(176, 210);
+            this.unit8.Location = new System.Drawing.Point(207, 167);
             this.unit8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit8.Name = "unit8";
             this.unit8.Size = new System.Drawing.Size(10, 13);
@@ -223,7 +226,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit7.AutoSize = true;
             this.unit7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit7.Location = new System.Drawing.Point(105, 210);
+            this.unit7.Location = new System.Drawing.Point(136, 167);
             this.unit7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit7.Name = "unit7";
             this.unit7.Size = new System.Drawing.Size(10, 13);
@@ -235,7 +238,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit5.AutoSize = true;
             this.unit5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit5.Location = new System.Drawing.Point(387, 112);
+            this.unit5.Location = new System.Drawing.Point(418, 83);
             this.unit5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit5.Name = "unit5";
             this.unit5.Size = new System.Drawing.Size(10, 13);
@@ -247,7 +250,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit3.AutoSize = true;
             this.unit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit3.Location = new System.Drawing.Point(248, 112);
+            this.unit3.Location = new System.Drawing.Point(279, 83);
             this.unit3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit3.Name = "unit3";
             this.unit3.Size = new System.Drawing.Size(10, 13);
@@ -259,7 +262,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.unit1.AutoSize = true;
             this.unit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit1.Location = new System.Drawing.Point(105, 112);
+            this.unit1.Location = new System.Drawing.Point(136, 83);
             this.unit1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit1.Name = "unit1";
             this.unit1.Size = new System.Drawing.Size(10, 13);
@@ -280,7 +283,7 @@ namespace ArknightsRandomizerWinForm
             "Defenders",
             "Guards",
             "Casters"});
-            this.ClassFiltersBox.Location = new System.Drawing.Point(582, 96);
+            this.ClassFiltersBox.Location = new System.Drawing.Point(622, 50);
             this.ClassFiltersBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ClassFiltersBox.Name = "ClassFiltersBox";
             this.ClassFiltersBox.Size = new System.Drawing.Size(102, 139);
@@ -298,7 +301,7 @@ namespace ArknightsRandomizerWinForm
             "4*",
             "5*",
             "6*"});
-            this.RarityFiltersBox.Location = new System.Drawing.Point(692, 96);
+            this.RarityFiltersBox.Location = new System.Drawing.Point(732, 50);
             this.RarityFiltersBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.RarityFiltersBox.Name = "RarityFiltersBox";
             this.RarityFiltersBox.Size = new System.Drawing.Size(54, 109);
@@ -307,7 +310,7 @@ namespace ArknightsRandomizerWinForm
             // 
             // SquadSizeTrackbar
             // 
-            this.SquadSizeTrackbar.Location = new System.Drawing.Point(43, 66);
+            this.SquadSizeTrackbar.Location = new System.Drawing.Point(53, 33);
             this.SquadSizeTrackbar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SquadSizeTrackbar.Maximum = 11;
             this.SquadSizeTrackbar.Name = "SquadSizeTrackbar";
@@ -319,7 +322,7 @@ namespace ArknightsRandomizerWinForm
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 50);
+            this.label1.Location = new System.Drawing.Point(37, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
@@ -350,7 +353,7 @@ namespace ArknightsRandomizerWinForm
             // StageLabel
             // 
             this.StageLabel.AutoSize = true;
-            this.StageLabel.Location = new System.Drawing.Point(370, 408);
+            this.StageLabel.Location = new System.Drawing.Point(490, 312);
             this.StageLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StageLabel.Name = "StageLabel";
             this.StageLabel.Size = new System.Drawing.Size(10, 13);
@@ -361,7 +364,7 @@ namespace ArknightsRandomizerWinForm
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(644, 71);
+            this.label2.Location = new System.Drawing.Point(669, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
@@ -381,7 +384,7 @@ namespace ArknightsRandomizerWinForm
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(607, 289);
+            this.label4.Location = new System.Drawing.Point(641, 255);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
@@ -390,7 +393,7 @@ namespace ArknightsRandomizerWinForm
             // 
             // MedicsLimitBox
             // 
-            this.MedicsLimitBox.Location = new System.Drawing.Point(573, 286);
+            this.MedicsLimitBox.Location = new System.Drawing.Point(614, 252);
             this.MedicsLimitBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MedicsLimitBox.Name = "MedicsLimitBox";
             this.MedicsLimitBox.Size = new System.Drawing.Size(28, 20);
@@ -400,7 +403,7 @@ namespace ArknightsRandomizerWinForm
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(718, 289);
+            this.label5.Location = new System.Drawing.Point(724, 255);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 13);
@@ -409,7 +412,7 @@ namespace ArknightsRandomizerWinForm
             // 
             // SupportersLimitBox
             // 
-            this.SupportersLimitBox.Location = new System.Drawing.Point(684, 286);
+            this.SupportersLimitBox.Location = new System.Drawing.Point(697, 252);
             this.SupportersLimitBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SupportersLimitBox.Name = "SupportersLimitBox";
             this.SupportersLimitBox.Size = new System.Drawing.Size(28, 20);
@@ -419,7 +422,7 @@ namespace ArknightsRandomizerWinForm
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(607, 367);
+            this.label6.Location = new System.Drawing.Point(641, 333);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 13);
@@ -428,7 +431,7 @@ namespace ArknightsRandomizerWinForm
             // 
             // SnipersLimitBox
             // 
-            this.SnipersLimitBox.Location = new System.Drawing.Point(573, 364);
+            this.SnipersLimitBox.Location = new System.Drawing.Point(614, 330);
             this.SnipersLimitBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SnipersLimitBox.Name = "SnipersLimitBox";
             this.SnipersLimitBox.Size = new System.Drawing.Size(28, 20);
@@ -438,7 +441,7 @@ namespace ArknightsRandomizerWinForm
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(718, 367);
+            this.label7.Location = new System.Drawing.Point(724, 333);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 13);
@@ -447,7 +450,7 @@ namespace ArknightsRandomizerWinForm
             // 
             // VanguardsLimitBox
             // 
-            this.VanguardsLimitBox.Location = new System.Drawing.Point(684, 364);
+            this.VanguardsLimitBox.Location = new System.Drawing.Point(697, 330);
             this.VanguardsLimitBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.VanguardsLimitBox.Name = "VanguardsLimitBox";
             this.VanguardsLimitBox.Size = new System.Drawing.Size(28, 20);
@@ -457,7 +460,7 @@ namespace ArknightsRandomizerWinForm
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(607, 327);
+            this.label8.Location = new System.Drawing.Point(724, 373);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
@@ -466,7 +469,7 @@ namespace ArknightsRandomizerWinForm
             // 
             // SpecialistsLimitBox
             // 
-            this.SpecialistsLimitBox.Location = new System.Drawing.Point(573, 324);
+            this.SpecialistsLimitBox.Location = new System.Drawing.Point(697, 370);
             this.SpecialistsLimitBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SpecialistsLimitBox.Name = "SpecialistsLimitBox";
             this.SpecialistsLimitBox.Size = new System.Drawing.Size(28, 20);
@@ -476,7 +479,7 @@ namespace ArknightsRandomizerWinForm
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(718, 327);
+            this.label9.Location = new System.Drawing.Point(724, 293);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 13);
@@ -485,7 +488,7 @@ namespace ArknightsRandomizerWinForm
             // 
             // DefendersLimitBox
             // 
-            this.DefendersLimitBox.Location = new System.Drawing.Point(684, 324);
+            this.DefendersLimitBox.Location = new System.Drawing.Point(697, 290);
             this.DefendersLimitBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DefendersLimitBox.Name = "DefendersLimitBox";
             this.DefendersLimitBox.Size = new System.Drawing.Size(28, 20);
@@ -495,7 +498,7 @@ namespace ArknightsRandomizerWinForm
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(607, 408);
+            this.label10.Location = new System.Drawing.Point(641, 374);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 13);
@@ -504,7 +507,7 @@ namespace ArknightsRandomizerWinForm
             // 
             // GuardsLimitBox
             // 
-            this.GuardsLimitBox.Location = new System.Drawing.Point(573, 405);
+            this.GuardsLimitBox.Location = new System.Drawing.Point(614, 371);
             this.GuardsLimitBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.GuardsLimitBox.Name = "GuardsLimitBox";
             this.GuardsLimitBox.Size = new System.Drawing.Size(28, 20);
@@ -514,7 +517,7 @@ namespace ArknightsRandomizerWinForm
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(718, 408);
+            this.label11.Location = new System.Drawing.Point(641, 293);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 13);
@@ -523,7 +526,7 @@ namespace ArknightsRandomizerWinForm
             // 
             // CastersLimitBox
             // 
-            this.CastersLimitBox.Location = new System.Drawing.Point(684, 405);
+            this.CastersLimitBox.Location = new System.Drawing.Point(614, 290);
             this.CastersLimitBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CastersLimitBox.Name = "CastersLimitBox";
             this.CastersLimitBox.Size = new System.Drawing.Size(28, 20);
@@ -533,7 +536,7 @@ namespace ArknightsRandomizerWinForm
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(618, 261);
+            this.label12.Location = new System.Drawing.Point(649, 224);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(122, 13);
@@ -542,7 +545,8 @@ namespace ArknightsRandomizerWinForm
             // 
             // RollStageButton
             // 
-            this.RollStageButton.Location = new System.Drawing.Point(185, 415);
+            this.RollStageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RollStageButton.Location = new System.Drawing.Point(292, 414);
             this.RollStageButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.RollStageButton.Name = "RollStageButton";
             this.RollStageButton.Size = new System.Drawing.Size(111, 23);
@@ -551,22 +555,11 @@ namespace ArknightsRandomizerWinForm
             this.RollStageButton.UseVisualStyleBackColor = true;
             this.RollStageButton.Click += new System.EventHandler(this.RollStageButton_Click);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(559, 21);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(240, 31);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Advanced Corner";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label15.Location = new System.Drawing.Point(544, 21);
+            this.label15.Location = new System.Drawing.Point(590, 21);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(9, 416);
             this.label15.TabIndex = 17;
@@ -577,7 +570,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox1.Location = new System.Drawing.Point(462, 146);
+            this.opPictureBox1.Location = new System.Drawing.Point(493, 103);
             this.opPictureBox1.Name = "opPictureBox1";
             this.opPictureBox1.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -588,7 +581,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox2.Location = new System.Drawing.Point(179, 146);
+            this.opPictureBox2.Location = new System.Drawing.Point(210, 103);
             this.opPictureBox2.Name = "opPictureBox2";
             this.opPictureBox2.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -599,7 +592,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox3.Location = new System.Drawing.Point(319, 50);
+            this.opPictureBox3.Location = new System.Drawing.Point(350, 21);
             this.opPictureBox3.Name = "opPictureBox3";
             this.opPictureBox3.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -610,7 +603,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox4.Location = new System.Drawing.Point(319, 146);
+            this.opPictureBox4.Location = new System.Drawing.Point(350, 103);
             this.opPictureBox4.Name = "opPictureBox4";
             this.opPictureBox4.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -621,7 +614,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox5.Location = new System.Drawing.Point(462, 50);
+            this.opPictureBox5.Location = new System.Drawing.Point(493, 21);
             this.opPictureBox5.Name = "opPictureBox5";
             this.opPictureBox5.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -632,7 +625,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox6.Location = new System.Drawing.Point(179, 50);
+            this.opPictureBox6.Location = new System.Drawing.Point(210, 21);
             this.opPictureBox6.Name = "opPictureBox6";
             this.opPictureBox6.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -643,7 +636,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox7.Location = new System.Drawing.Point(390, 146);
+            this.opPictureBox7.Location = new System.Drawing.Point(421, 103);
             this.opPictureBox7.Name = "opPictureBox7";
             this.opPictureBox7.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -654,7 +647,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox10.Location = new System.Drawing.Point(251, 146);
+            this.opPictureBox10.Location = new System.Drawing.Point(282, 103);
             this.opPictureBox10.Name = "opPictureBox10";
             this.opPictureBox10.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -665,7 +658,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox8.Location = new System.Drawing.Point(108, 146);
+            this.opPictureBox8.Location = new System.Drawing.Point(139, 103);
             this.opPictureBox8.Name = "opPictureBox8";
             this.opPictureBox8.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -676,7 +669,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox11.Location = new System.Drawing.Point(390, 50);
+            this.opPictureBox11.Location = new System.Drawing.Point(421, 21);
             this.opPictureBox11.Name = "opPictureBox11";
             this.opPictureBox11.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -687,7 +680,7 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox9.Location = new System.Drawing.Point(251, 50);
+            this.opPictureBox9.Location = new System.Drawing.Point(282, 21);
             this.opPictureBox9.Name = "opPictureBox9";
             this.opPictureBox9.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -698,18 +691,40 @@ namespace ArknightsRandomizerWinForm
             // 
             this.opPictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.opPictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opPictureBox12.Location = new System.Drawing.Point(108, 50);
+            this.opPictureBox12.Location = new System.Drawing.Point(139, 21);
             this.opPictureBox12.Name = "opPictureBox12";
             this.opPictureBox12.Size = new System.Drawing.Size(61, 59);
             this.opPictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.opPictureBox12.TabIndex = 18;
             this.opPictureBox12.TabStop = false;
             // 
+            // StagePictureBox
+            // 
+            this.StagePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.StagePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.StagePictureBox.Location = new System.Drawing.Point(182, 237);
+            this.StagePictureBox.Name = "StagePictureBox";
+            this.StagePictureBox.Size = new System.Drawing.Size(270, 161);
+            this.StagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.StagePictureBox.TabIndex = 18;
+            this.StagePictureBox.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(15, 211);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(571, 13);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "_________________________________________________________________________________" +
+    "_____________";
+            // 
             // ClassFiltersScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.opPictureBox12);
             this.Controls.Add(this.opPictureBox6);
             this.Controls.Add(this.opPictureBox9);
@@ -721,9 +736,9 @@ namespace ArknightsRandomizerWinForm
             this.Controls.Add(this.opPictureBox10);
             this.Controls.Add(this.opPictureBox4);
             this.Controls.Add(this.opPictureBox7);
+            this.Controls.Add(this.StagePictureBox);
             this.Controls.Add(this.opPictureBox1);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.RollStageButton);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.CastersLimitBox);
@@ -765,8 +780,10 @@ namespace ArknightsRandomizerWinForm
             this.Controls.Add(this.BackToRosterButton);
             this.Controls.Add(this.RollButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MaximizeBox = false;
             this.Name = "ClassFiltersScreen";
             this.Text = "Arknights Randomizer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClassFiltersScreen_FormClosing);
@@ -783,6 +800,7 @@ namespace ArknightsRandomizerWinForm
             ((System.ComponentModel.ISupportInitialize)(this.opPictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opPictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opPictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StagePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -829,7 +847,6 @@ namespace ArknightsRandomizerWinForm
         private System.Windows.Forms.TextBox CastersLimitBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button RollStageButton;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox opPictureBox1;
         private System.Windows.Forms.PictureBox opPictureBox2;
@@ -843,5 +860,7 @@ namespace ArknightsRandomizerWinForm
         private System.Windows.Forms.PictureBox opPictureBox11;
         private System.Windows.Forms.PictureBox opPictureBox9;
         private System.Windows.Forms.PictureBox opPictureBox12;
+        private System.Windows.Forms.PictureBox StagePictureBox;
+        private System.Windows.Forms.Label label13;
     }
 }
