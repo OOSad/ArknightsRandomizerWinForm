@@ -16,7 +16,7 @@ namespace ArknightsRandomizerWinForm
         public List<string> userSupporterOperators = new List<string>() { };
         public List<string> defaultUserSupporterOperators = new List<string>() { };
 
-        public List<string> sniperOperators = new List<string>() { "Andreana", "Rosa(Poca)", "W", "Sesa", "GreyThroat", "Ambriel", "May", "Executor", "Vermeil", "Schwarz", "Catapult", "Exusiai", "Firewatch", "Provence", "Meteorite", "Platinum", "Blue Poison", "Shirayuki", "Meteor", "Jessica", "Adnachiel", "Kroos", "Rangers" };
+        public List<string> sniperOperators = new List<string>() { "Aciddrop", "Andreana", "Rosa(Poca)", "W", "Sesa", "GreyThroat", "Ambriel", "May", "Executor", "Vermeil", "Schwarz", "Catapult", "Exusiai", "Firewatch", "Provence", "Meteorite", "Platinum", "Blue Poison", "Shirayuki", "Meteor", "Jessica", "Adnachiel", "Kroos", "Rangers" };
         public List<string> userSniperOperators = new List<string>() { };
         public List<string> defaultUserSniperOperators = new List<string>() { };
 
@@ -28,15 +28,15 @@ namespace ArknightsRandomizerWinForm
         public List<string> userSpecialistOperators = new List<string>() { };
         public List<string> defaultUserSpecialistOperators = new List<string>() { };
 
-        public List<string> defenderOperators = new List<string>() { "Asbestos", "Nian", "Hung", "Bison", "Dur-nar", "Spot", "Saria", "Hoshiguma", "Vulcan", "Croissant", "Liskarm", "Nearl", "Gummy", "Cuora", "Matterhorn", "Beagle", "Cardigan", "Noir Corne" };
+        public List<string> defenderOperators = new List<string>() { "Eunectes", "Asbestos", "Nian", "Hung", "Bison", "Dur-nar", "Spot", "Saria", "Hoshiguma", "Vulcan", "Croissant", "Liskarm", "Nearl", "Gummy", "Cuora", "Matterhorn", "Beagle", "Cardigan", "Noir Corne" };
         public List<string> userDefenderOperators = new List<string>() { };
         public List<string> defaultUserDefenderOperators = new List<string>() { };
 
-        public List<string> guardOperators = new List<string>() { "Thorns", "Ayerscarpe", "Sideroca", "Cutter", "Bibeak", "Utage", "Blaze", "Broca", "Flamebringer", "Hellagur", "Astesia", "Ch'en", "Swire", "Popukar", "Skadi", "Beehunter", "Midnight", "Savage", "SilverAsh", "Specter", "Lappland", "Indra", "Franka", "Mousse", "Estelle", "Frostleaf", "Matoimaru", "Dobermann", "Melantha", "Castle-3" };
+        public List<string> guardOperators = new List<string>() { "Flint", "Thorns", "Ayerscarpe", "Sideroca", "Cutter", "Bibeak", "Utage", "Blaze", "Broca", "Flamebringer", "Hellagur", "Astesia", "Ch'en", "Swire", "Popukar", "Skadi", "Beehunter", "Midnight", "Savage", "SilverAsh", "Specter", "Lappland", "Indra", "Franka", "Mousse", "Estelle", "Frostleaf", "Matoimaru", "Dobermann", "Melantha", "Castle-3" };
         public List<string> userGuardOperators = new List<string>() { };
         public List<string> defaultUserGuardOperators = new List<string>() { };
 
-        public List<string> casterOperators = new List<string>() { "Beeswax", "Click", "Leonhardt", "Absinthe", "Ceobe", "Leizi", "Mostima", "Greyy", "Nightmare", "Eyjafjalla", "Ifrit", "Skyfire", "Amiya", "Gitano", "Haze", "Steward", "Lava", "12F", "Durin" };
+        public List<string> casterOperators = new List<string>() { "Tomimi", "Beeswax", "Click", "Leonhardt", "Absinthe", "Ceobe", "Leizi", "Mostima", "Greyy", "Nightmare", "Eyjafjalla", "Ifrit", "Skyfire", "Amiya", "Gitano", "Haze", "Steward", "Lava", "12F", "Durin" };
         public List<string> userCasterOperators = new List<string>() { };
         public List<string> defaultUserCasterOperators = new List<string>() { };
 
