@@ -10,7 +10,7 @@ namespace ArknightsRandomizerWinForm
     {
         public static void Add_RandomUserOps_To_List_Of_RolledOps(int maxSquadSize, int currentSquadSize, Random randomNumberGenerator, List<string> userOps, List<string> rolledOps)
         {
-            for (int i = currentSquadSize; i < maxSquadSize; i++)
+            for (int i = currentSquadSize - 1; i < maxSquadSize; i++)
             {
                 try
                 {
